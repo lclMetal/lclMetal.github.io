@@ -1,0 +1,448 @@
+body {
+    background-color: lightgray;
+    color: black;
+    font-family: "Segoe UI", Calibri, Futura, Geneva, Verdana, Arial, sans-serif;
+    max-width: 1200px;
+    min-height: 100%;
+    margin: 0.5em auto;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+h2 a {
+    font-size: 90%;
+}
+
+p, li {
+    line-height: 1.5;
+}
+
+th[scope="row"] {
+    text-align: left;
+    padding: 0.5em;
+    vertical-align: baseline;
+}
+
+td {
+    padding: 0.5em;
+    vertical-align: baseline;
+}
+
+footer {
+    display: flex;
+}
+
+footer p {
+    flex: 1;
+    margin: 0;
+}
+
+footer address {
+    flex: 1;
+    margin: 0;
+    text-align: right;
+}
+
+img.qa {
+    width: 7em;
+    height: auto;
+    float: left;
+    margin-top: 0.3em;
+    margin-left: -2em;
+}
+
+.content-box.qa {
+    background-image: url("icon_qa_flipped.svg");
+    background-repeat: no-repeat;
+    background-size: 7em;
+    background-position: top 0.8em left;
+    padding-left: 7em;
+}
+
+.answer-a {
+    font-size: 1.4em;
+    /* font-weight: bold; */
+}
+
+.p-subheader {
+    margin-top: 2em;
+}
+
+.download-box {
+    float: right;
+    border-radius: 10px;
+    padding: 0.5em 1.5em;
+    margin-bottom: 1.5em;
+    margin-right: 1.5em;
+    background-color: lightgray;
+    background-size: auto 3.5rem;
+    background-repeat: no-repeat;
+    background-position: 1.5em center;
+    background-image: url("icon_download.svg");
+}
+
+.download-box h3, .download-box p {
+    padding-left: 4rem;
+}
+
+.small-note {
+    font-size: 0.7em;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reference-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reference-flex > div {
+    flex-basis: 33%;
+    flex-grow: 1;
+    margin: 0;
+}
+
+.reference-flex div ul {
+    padding: 0 1em;
+}
+
+.flex > div {
+    text-align: center;
+    background-color: white;
+    flex-basis: 25%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.topnav a, .topnav a:visited, .topnav > a:link, .topnav span{
+    width: 20%;
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: white;
+    border: solid lightgray 4px;
+    padding: 0.5em;
+}
+
+.topnav span {
+    border: solid white 4px;
+}
+
+.topnav a:hover {
+    border: solid white 4px;
+    color: #666666;
+    text-decoration: underline;
+}
+
+.topnav + * {
+    clear: both;
+}
+
+.reference-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0;
+    background-color: white;
+    padding: 0.2em 0;
+    /* border-bottom: dashed lightgray; */
+}
+
+.reference-nav a, .reference-nav span {
+    flex: 1;
+    flex-basis: 20%;
+    text-align: center;
+    /* font-size: 1.2em; */
+    margin: auto 1em;
+    height: 2em;
+    line-height: 2;
+    border-bottom: dashed lightgray;
+}
+
+.reference-nav span {
+    border-bottom: solid lightgray;
+    /* text-decoration: underline; */
+}
+
+.reference-nav + .content-box, body .topnav + .content-box {
+    margin-top: 0;
+}
+
+.box-link img {
+    width: 60%;
+}
+
+.box-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: solid lightgray 3px;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+
+.box-link h2 {
+    color: #666666;
+    margin-bottom: 0.3em;
+}
+
+.box-link p {
+    color: #666666;
+    margin-top: 0;
+}
+
+.box-link:hover {
+    border: solid white 3px;
+    color: #666666;
+    text-decoration: underline;
+}
+
+.reference-category {
+    background-color: white;
+    padding: 0.5em 1.5em;
+}
+
+.content-box {
+    background-color: white;
+    padding: 0.5em 2em;
+    margin: 1em 0;
+    /* margin-top: 0; */
+    overflow: auto;
+}
+
+.content-box ol, .content-box ul {
+    padding-left: 2.5em;
+}
+
+.content-box ol li {
+    padding: 0.5em 0;
+}
+
+ol.index-list li {
+    padding: 0;
+}
+
+.screenshot-box {
+    text-align: center;
+    padding: 1em;
+    max-width: 50%;
+    background-color: white;
+}
+
+.screenshot-box img {
+    max-width: 80%;
+}
+
+.screenshot-box p {
+    margin: 0.5em 0;
+    padding: 0 1em;
+    font-style: italic;
+}
+
+.important {
+    background-color: lightblue;
+    padding: 1em;
+}
+
+.important a {
+    color: blue;
+}
+
+div.important {
+    background-color: lightblue;
+    padding: 0.1em 1em;
+}
+
+.go-to-top {
+    text-align: right;
+}
+
+ul li {
+    list-style-type: circle;
+}
+
+h2 a, h3 a, h2 a:link, h3 a:link, h2 a:visited, h3 a:visited {
+    /* color: black; */
+    text-decoration: none;
+}
+
+h2 a:hover, h3 a:hover {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+a:link, p.go-to-top a:visited {
+    color: cadetblue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: darkcyan;
+}
+
+a:hover, p.go-to-top a:hover {
+    color: aquamarine;
+}
+
+pre {
+    padding: 0.75em;
+    border-radius: 15px;
+    color: white;
+    background-color: #9E9E9E;
+    white-space: pre-wrap;
+    overflow: auto;
+}
+
+p code, li code, h2 code, h3 code {
+    font-size: 1.2em;
+}
+
+pre code {
+    font-size: 1em;
+}
+
+.left {
+    float: left;
+    margin-right: 2em;
+}
+
+.right {
+    float: right;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+
+
+@media all and (max-width: 850px) {
+    h2 a {
+        font-size: 85%;
+    }
+    
+    .flex > div {
+        flex-basis: 50%;
+    }
+    
+    .reference-flex > div {
+        flex-basis: 50%;
+    }
+    
+    .reference-nav a, .reference-nav span {
+        flex-basis: 30%;
+    }
+    
+    .download-box {
+        float: left;
+        margin-right: 0;
+    }
+    
+    .download-box + * {
+        clear: both;
+    }
+    
+    img.qa {
+        margin-left: -1em;
+    }
+    
+    .content-box {
+        padding: 0.5em 1em;
+    }
+    
+    .content-box ol, .content-box ul {
+        padding-left: 1.5em;
+    }
+    
+    .screenshot-box {
+        text-align: center;
+        padding: 1em;
+        max-width: 100%;
+    }
+}
+
+@media all and (max-width: 620px) {
+    .reference-flex > div {
+        flex-basis: 100%;
+    }
+
+    footer {
+        display: block;
+    }
+
+    footer address {
+        text-align: left;
+    }
+}
+
+@media all and (max-width: 580px) {
+    h2 a {
+        font-size: 80%;
+    }
+    
+    .flex > div {
+        flex-basis: 100%;
+    }
+    
+    .topnav a, .topnav a:visited, .topnav a:link, .topnav span {
+        width: 100%;
+    }
+    
+    .topnav span {
+        border: solid lightgray 4px;
+    }
+    
+    .reference-nav a, .reference-nav span {
+        flex-basis: 100%;
+    }
+    
+    .download-box {
+        padding: 0.5em 1em;
+        background-size: auto 3.5rem;
+        background-repeat: no-repeat;
+        background-position: 1.5em center;
+        background-image: none;
+    }
+    
+    .download-box h3, .download-box p {
+        padding-left: 0;
+    }
+    
+    img.qa {
+        margin-left: -0.5em;
+    }
+    
+    .content-box {
+        padding: 0.5em 0.5em;
+    }
+    
+    .content-box ol, .content-box ul {
+        padding-left: 1em;
+    }
+    
+    .go-to-top {
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+    
+    .screenshot-box {
+        text-align: center;
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .screenshot-box img {
+        max-width: 100%;
+    }
+}
