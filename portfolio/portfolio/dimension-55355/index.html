@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lassi Lehtisen portfolion ohjelmointinäyte">
+    <meta name="keywords" content="GitHub,C,Game-Editor,Custom-Text-Renderer,CTR">
+    <meta name="author" content="Lassi Lehtinen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+    <link href="../../styles/styles.css" rel="StyleSheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Ruda|Ruda:400|Ruda:700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bungee%7CRuda" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/3850b9e2de.js" crossorigin="anonymous"></script>
+    <link href="../../js/lightbox/css/lightbox.css" rel="StyleSheet" type="text/css" />
+    <script src="../../js/LanguageSwitcher.js"></script>
+    <title>Dimension 55355 - Portfolio - Lassi Lehtinen</title>
+</head>
+<body>
+    <header>
+        <h1><span class="white">Lassi<br />Lehtinen</span></h1>
+    </header>
+
+    <nav class="topnav">
+        <ul>
+            <!--    The whitespace between the li elements has been commented out to
+                    prevent an unsightly gap from appearing between the navigation items.   -->
+            <li><a href="../../"><span class="lang-fi">Etusivu</span><span class="lang-en">Main</span></a></li><!--
+            --><li class="current-page"><a href="../">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="language-selection">
+            <button type="button" onClick="langSwitch.setLanguage('fi')">Suomeksi</button>
+            <button type="button" onClick="langSwitch.setLanguage('en')">In English</button>
+        </div>
+        <p class="lang-fi"><span class="fas fa-arrow-left"></span> <a href="../">Takaisin</a></p>
+        <p class="lang-en"><span class="fas fa-arrow-left"></span> <a href="../">Back</a></p>
+        <div class="section first lang-fi">
+            <div class="picture-container right">
+                <img src="images/dimension-55355-04.png" alt="Kuvakaappaus neljännestä tasosta." />
+                <p>
+                    Kuvakaappaus pelin neljännestä tasosta.
+                </p>
+            </div>
+            <h2>Dimension 55355</h2>
+            <!-- <iframe src="https://widgets.gamejolt.com/package/v1?key=U4UANnDd" frameborder="0" width="500" height="245" class="right"></iframe> -->
+            <p>
+                Vapaa-ajan projekti<br />
+                Game Editor<br />
+                2010 &ndash; 2011
+            </p>
+            <p>
+                <a href="http://download853.mediafire.com/4spgbzdjd3cg/u8lyvnzd78p9yk0/Dimension55355.zip" title="Lataa pelin lähdekoodi">Lataa pelin lähdekoodi</a>
+                <span class="icon fas fa-download fa-smaller"></span><br />
+                <a href="https://gamejolt.com/games/dimension-55355/231568" title="Dimension 55355 Game Joltissa">Dimension 55355 Game Joltissa</a>
+                <span class="icon fas fa-external-link-alt fa-smaller"></span>
+            </p>
+            <p>
+                Dimension 55355 on ensimmäinen ja toistaiseksi ainut peli, jonka olen tehnyt valmiiksi asti.
+            </p>
+            <p>
+                Aloitin pelin työstämisen vuoden 2010 lopulla ja sain sen valmiiksi alkuvuodesta 2011. Peli on 2D-tasohyppely ja siinä on 30 tasoa.
+            </p>
+            <h3>Pelimekaniikat</h3>
+            <p>
+                Pelin mekaniikat ovat varsin yksinkertaiset. Pelihahmon väriä voi vaihtaa punaisen ja sinisen välillä. Kun hahmo on sininen, se pystyy kulkemaan sinisistä ovista ja kiipeilemään punaisessa maassa. Vastaavasti punaisena voi kulkea punaisista ovista ja kiipeillä sinisessä maassa. Viimeistä tasoa lukuun ottamatta jokaisessa tasossa tavoitteena on löytää avain, jolla saa auki oven, joka vie seuraavaan tasoon.
+            </p>
+            <p>
+                Pelin pisteytysjärjestelmä on seuraavanlainen: jokaisen kentän alussa tason pisteet (level score) asetetaan arvoon 200 * huoneiden määrä tasossa. Saadusta luvusta vähennetään 5 pistettä sekunnin välein, kunnes pelaaja voittaa tason tai kunnes luku on 0. Kun pelaaja voittaa tason, jäljellä olevat pisteet lisätään pelaajan kokonaispisteisiin, joista ei koskaan vähennetä. Näin pelaaja saa sitä paremmat kokonaispisteet, mitä nopeammin hän läpäisee jokaisen tason. Piikkeihin osuminen vähentää tasopisteistä 10% tason aloituspistemäärästä.
+            </p>
+            <h3>Mitä korjaisin jos tekisin pelin nyt</h3>
+            <p>
+                Nyt, yli 10 vuotta pelin julkaisemisen jälkeen näen pelissä parantamisen varaa, vaikka kokonaisuutena olenkin peliin edelleen verrattain tyytyväinen. Kuten pelin Game Jolt -sivulta voi lukea, suunnittelin jossain vaiheessa vuosia sitten pelin uudistamista ja parantamista, mutta se jäi lopulta tekemättä. Tässä silti ajatuksia siitä, mitä tekisin eritavoin, jos kehittäisin peliä nyt.
+            </p>
+            <ul>
+                <li>Lisäisin koko näytön tilan ja tuen isommille resoluutioille</li>
+                <li>Poistaisin pelin käynnistyksestä turhat viivytykset, kuten valelatauspalkin (kyllä, pelissä on "latauspalkki" joka ei tee muuta kuin hukkaa pelaajan aikaa..)</li>
+                <li>Toisin pelin pisteytysjärjestelmän paremmin esille, esim. näyttämällä tason pisteiden siirron kokonaispisteisiin tason lopussa</li>
+                <li>Muuttaisin osaa pelin tasoista tehdäkseni niistä mukavampia pelata</li>
+                <li>Säätäisin pelin fysiikoita, nykyisellään hyppykaari on hieman kömpelö ja pelihahmo liian iso</li>
+                <li>Uudistaisin grafiikoita</li>
+                <li>Lisäisin mahdollisuuden säätää musiikin ja äänitehosteiden äänenvoimakkuutta</li>
+                <li>Lisäisin mahdollisuuden palata päävalikkoon</li>
+                <li>Lisäisin mahdollisuuden määritellä ohjaimet uudelleen</li>
+            </ul>
+            <div class="image-container justify-start">
+                <a href="images/dimension-55355-01.png" data-lightbox="AlbumFI" data-title="'Latausruutu', joka ei oikeasti lataa mitään. (Jostain syystä 15-vuotias minä piti tätä hyvänä ideana)" data-alt="Latausruutu, jossa LCL logo, pelin kehitysvuosi 2010 ja 'latauspalkki'."><img src="images/dimension-55355-01.png" class="pic-thumbnail" alt="Latausruutu, jossa LCL logo, pelin kehitysvuosi 2010 ja 'latauspalkki'." /></a>
+                <a href="images/dimension-55355-02.png" data-lightbox="AlbumFI" data-title="Päävalikko" data-alt="Pelin päävalikkonäkymä, jossa teksti 'Welcome!', kuva pelihahmosta ja valinnat: 'new game', 'load game', 'help', 'contact LCL', ja 'exit'."><img src="images/dimension-55355-02.png" class="pic-thumbnail" alt="Pelin päävalikkonäkymä, jossa teksti 'Welcome!', kuva pelihahmosta ja valinnat: 'new game', 'load game', 'help', 'contact LCL', ja 'exit'." /></a>
+                <a href="images/dimension-55355-03.png" data-lightbox="AlbumFI" data-title="Ensimmäinen taso" data-alt="Kuvakaappaus ensimmäisestä tasosta."><img src="images/dimension-55355-03.png" class="pic-thumbnail" alt="Kuvakaappaus ensimmäisestä tasosta." /></a>
+                <a href="images/dimension-55355-04.png" data-lightbox="AlbumFI" data-title="Neljäs taso" data-alt="Kuvakaappaus neljännestä tasosta."><img src="images/dimension-55355-04.png" class="pic-thumbnail" alt="Kuvakaappaus neljännestä tasosta." /></a>
+                <a href="images/dimension-55355-05.png" data-lightbox="AlbumFI" data-title="Kuudes taso" data-alt="Kuvakaappaus kuudennesta tasosta."><img src="images/dimension-55355-05.png" class="pic-thumbnail" alt="Kuvakaappaus kuudennesta tasosta." /></a>
+                <a href="images/dimension-55355-06.png" data-lightbox="AlbumFI" data-title="Kuudes taso, pelaaja on poiminut avaimen" data-alt="Kuvakaappaus kuudennesta tasosta."><img src="images/dimension-55355-06.png" class="pic-thumbnail" alt="Kuvakaappaus kuudennesta tasosta." /></a>
+                <a href="images/dimension-55355-07.png" data-lightbox="AlbumFI" data-title="Huone kahdennessatoista tasossa" data-alt="Kuvakaappaus huoneesta kahdennessatoista tasossa."><img src="images/dimension-55355-07.png" class="pic-thumbnail" alt="Kuvakaappaus huoneesta kahdennessatoista tasossa." /></a>
+                <a href="images/dimension-55355-08.png" data-lightbox="AlbumFI" data-title="Kolmastoista taso" data-alt="Kuvakaappaus kolmannestatoista tasosta."><img src="images/dimension-55355-08.png" class="pic-thumbnail" alt="Kuvakaappaus kolmannestatoista tasosta." /></a>
+                <a href="images/dimension-55355-09.png" data-lightbox="AlbumFI" data-title="Huone viidennessätoista tasossa" data-alt="Kuvakaappaus huoneesta viidennessätoista tasossa."><img src="images/dimension-55355-09.png" class="pic-thumbnail" alt="Kuvakaappaus huoneesta viidennessätoista tasossa." /></a>
+                <a href="images/dimension-55355-10.png" data-lightbox="AlbumFI" data-title="Huone yhdeksännessätoista tasossa" data-alt="Kuvakaappaus huoneesta yhdeksännessätoista tasossa."><img src="images/dimension-55355-10.png" class="pic-thumbnail" alt="Kuvakaappaus huoneesta yhdeksännessätoista tasossa." /></a>
+                <a href="images/dimension-55355-11.png" data-lightbox="AlbumFI" data-title="Huone 25. tasossa" data-alt="Kuvakaappaus huoneesta 25. tasossa."><img src="images/dimension-55355-11.png" class="pic-thumbnail" alt="Kuvakaappaus huoneesta 25. tasossa." /></a>
+                <a href="images/dimension-55355-12.png" data-lightbox="AlbumFI" data-title="Huone 29. tasossa" data-alt="Kuvakaappaus huoneesta 29. tasossa."><img src="images/dimension-55355-12.png" class="pic-thumbnail" alt="Kuvakaappaus huoneesta 29. tasossa." /></a>
+                <a href="images/dimension-55355-13.png" data-lightbox="AlbumFI" data-title="Huone 30. tasossa" data-alt="Kuvakaappaus huoneesta 30. tasossa."><img src="images/dimension-55355-13.png" class="pic-thumbnail" alt="Kuvakaappaus huoneesta 30. tasossa." /></a>
+                <a href="images/dimension-55355-14.png" data-lightbox="AlbumFI" data-title="Loppukohtaus" data-alt="Kuvakaappaus loppukohtauksesta."><img src="images/dimension-55355-14.png" class="pic-thumbnail" alt="Kuvakaappaus loppukohtauksesta." /></a>
+                <a href="images/dimension-55355-15.png" data-lightbox="AlbumFI" data-title="Voittoruutu" data-alt="Kuvakaappaus voittoruudusta, jossa pelaajan kokonaispisteet ja lokaali ennätyspistemäärä."><img src="images/dimension-55355-15.png" class="pic-thumbnail" alt="Kuvakaappaus voittoruudusta, jossa pelaajan kokonaispisteet ja lokaali ennätyspistemäärä." /></a>
+            </div>
+        </div>
+        <div class="section first lang-en">
+            <div class="picture-container right">
+                <img src="images/dimension-55355-04.png" alt="Screenshot of the 4th level." />
+                <p>
+                    Screenshot of the 4th level.
+                </p>
+            </div>
+            <h2>Dimension 55355</h2>
+            <!-- <iframe src="https://widgets.gamejolt.com/package/v1?key=U4UANnDd" frameborder="0" width="500" height="245" class="right"></iframe> -->
+            <p>
+                Hobby project<br />
+                Game Editor<br />
+                2010 &ndash; 2011
+            </p>
+            <p>
+                <a href="http://download853.mediafire.com/4spgbzdjd3cg/u8lyvnzd78p9yk0/Dimension55355.zip" title="Download the game source code">Download the game source code</a>
+                <span class="icon fas fa-download fa-smaller"></span><br />
+                <a href="https://gamejolt.com/games/dimension-55355/231568" title="Dimension 55355 on Game Jolt">Dimension 55355 on Game Jolt</a>
+                <span class="icon fas fa-external-link-alt fa-smaller"></span>
+            </p>
+            <p>
+                Dimension 55355 is the first and so far the only full game I've every finished.
+            </p>
+            <p>
+                I began working on the game at the end of 2010 and finished it in the first half of 2011. The game is a 2D platformer with 30 levels.
+            </p>
+            <h3>Game mechanics</h3>
+            <p>
+                The mechanics of the game are fairly simple. The color of the main character can be changed between red and blue. When the character is blue, it can go through blue doors and climb in the red ground. Respectively, the character can go through red doors and climb in blue ground when he's red. In every level (barring the last level of the game) the goal is to find a key that opens the door to the next level.
+            </p>
+            <p>
+                The score system of the game is as follows: at the beginning of each level the level score is set to 200 * number of rooms in the level. The level score is then reduced by 5 each second until the player wins the level or until the level score reaches 0. When the player finishes a level the remaining level score is added to their total score which will never be reduced from. This way the player is rewarded for completing the levels fast. Getting hurt by the spikes reduces the level score by 10% of the initial value of the level score.
+            </p>
+            <h3>Things I would fix if I made the game now</h3>
+            <p>
+                Now, over 10 years after finishing the game I can see some room for improvement in it even though I'm still pretty pleased with the final product. A few years back I had plans to remaster the game, fixing some of the most glaring design problems and touching up the graphics. But that was eventually left undone. Here's some thoughts of how I would improve the game if I was developing it now. I would:
+            </p>
+            <ul>
+                <li>Add a full screen mode and support for larger resolutions</li>
+                <li>Remove the unnecessary delays in the game starting sequence, beginning with the fake loading bar before the main menu (yes, there is a "loading bar" in the game that only serves to waste the players time..)</li>
+                <li>Put more emphasis on the score system e.g. by showing the transition of the remaining level score to the total score</li>
+                <li>Redesign some of the levels to make them more fun to play</li>
+                <li>Adjust the physics of the game because the jump arc is a little clumsy and the main character a little too big</li>
+                <li>Update the graphics of the game</li>
+                <li>Add options for adjusting the volume of the music and sound effects</li>
+                <li>Add the option to return to the main menu without having to restart the game</li>
+                <li>Add the option to remap the controls of the game</li>
+            </ul>
+            <div class="image-container">
+                <a href="images/dimension-55355-01.png" data-lightbox="AlbumEN" data-title="A fake loading screen. Yeah, a great idea by 15-year-old me." data-alt="Game loading screen featuring LCL logo, game development year 2010 and a 'loading progress bar'."><img src="images/dimension-55355-01.png" class="pic-thumbnail" alt="Game loading screen featuring LCL logo, game development year 2010 and a 'loading progress bar'." /></a>
+                <a href="images/dimension-55355-02.png" data-lightbox="AlbumEN" data-title="Main menu" data-alt="Game main menu screen with welcome text, image of the main character and the following options: 'new game', 'load game', 'help', 'contact LCL' and 'exit'."><img src="images/dimension-55355-02.png" class="pic-thumbnail" alt="Game main menu screen with welcome text, image of the main character and the following options: 'new game', 'load game', 'help', 'contact LCL' and 'exit'." /></a>
+                <a href="images/dimension-55355-03.png" data-lightbox="AlbumEN" data-title="First level" data-alt="Screenshot of the first level."><img src="images/dimension-55355-03.png" class="pic-thumbnail" alt="Screenshot of the first level." /></a>
+                <a href="images/dimension-55355-04.png" data-lightbox="AlbumEN" data-title="4th level" data-alt="Screenshot of the 4th level."><img src="images/dimension-55355-04.png" class="pic-thumbnail" alt="Screenshot of the 4th level." /></a>
+                <a href="images/dimension-55355-05.png" data-lightbox="AlbumEN" data-title="6th level" data-alt="Screenshot of the 6th level."><img src="images/dimension-55355-05.png" class="pic-thumbnail" alt="Screenshot of the 6th level." /></a>
+                <a href="images/dimension-55355-06.png" data-lightbox="AlbumEN" data-title="6th level, the player has collected the key" data-alt="Screenshot of the 6th level."><img src="images/dimension-55355-06.png" class="pic-thumbnail" alt="Screenshot of the 6th level." /></a>
+                <a href="images/dimension-55355-07.png" data-lightbox="AlbumEN" data-title="A single room of level 12" data-alt="Screenshot of a room in the 12th level."><img src="images/dimension-55355-07.png" class="pic-thumbnail" alt="Screenshot of a room in the 12th level." /></a>
+                <a href="images/dimension-55355-08.png" data-lightbox="AlbumEN" data-title="13th level" data-alt="Screenshot of the 13th level."><img src="images/dimension-55355-08.png" class="pic-thumbnail" alt="Screenshot of the 13th level." /></a>
+                <a href="images/dimension-55355-09.png" data-lightbox="AlbumEN" data-title="A single room of level 15" data-alt="Screenshot of a room in the 15th level."><img src="images/dimension-55355-09.png" class="pic-thumbnail" alt="Screenshot of a room in the 15th level." /></a>
+                <a href="images/dimension-55355-10.png" data-lightbox="AlbumEN" data-title="A single room of level 19" data-alt="Screenshot of a room in the 19th level."><img src="images/dimension-55355-10.png" class="pic-thumbnail" alt="Screenshot of a room in the 19th level." /></a>
+                <a href="images/dimension-55355-11.png" data-lightbox="AlbumEN" data-title="A single room of level 25" data-alt="Screenshot of a room in the 25th level."><img src="images/dimension-55355-11.png" class="pic-thumbnail" alt="Screenshot of a room in the 25th level." /></a>
+                <a href="images/dimension-55355-12.png" data-lightbox="AlbumEN" data-title="A single room of level 29" data-alt="Screenshot of a room in the 29th level."><img src="images/dimension-55355-12.png" class="pic-thumbnail" alt="Screenshot of a room in the 29th level." /></a>
+                <a href="images/dimension-55355-13.png" data-lightbox="AlbumEN" data-title="A single room of level 30" data-alt="Screenshot of a room in the 30th level."><img src="images/dimension-55355-13.png" class="pic-thumbnail" alt="Screenshot of a room in the 30th level." /></a>
+                <a href="images/dimension-55355-14.png" data-lightbox="AlbumEN" data-title="The ending cutscene" data-alt="Screenshot of the ending cutscene."><img src="images/dimension-55355-14.png" class="pic-thumbnail" alt="Screenshot of the ending cutscene." /></a>
+                <a href="images/dimension-55355-15.png" data-lightbox="AlbumEN" data-title="Victory screen" data-alt="Screenshot of the win screen showing the player's score and the local high score."><img src="images/dimension-55355-15.png" class="pic-thumbnail" alt="Screenshot of the win screen showing the player's score and the local high score." /></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <address>
+            <em>
+                Email: lehtinen.lassi.c // gmail
+            </em>
+        </address>
+    </footer>
+
+    <script src="../../js/lightbox/lightbox-plus-jquery.min.js"></script>
+    <script>
+        let langSwitch = new LanguageSwitcher();
+
+        // speed up modal open/close animation,
+        // disable image transition animations
+        // and enable wrapping between first and last image
+        lightbox.option({
+            fadeDuration: 250,
+            resizeDuration: 0,
+            imageFadeDuration: 0,
+            wrapAround: true
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lassi Lehtisen portfolion ohjelmointinäyte">
+    <meta name="keywords" content="GitHub,C,Game-Editor,Resolutionary">
+    <meta name="author" content="Lassi Lehtinen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+    <link href="../../styles/styles.css" rel="StyleSheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Ruda|Ruda:400|Ruda:700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bungee%7CRuda" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/3850b9e2de.js" crossorigin="anonymous"></script>
+    <script src="../../js/LanguageSwitcher.js"></script>
+    <title>Resolutionary - Portfolio - Lassi Lehtinen</title>
+</head>
+<body>
+    <header>
+        <h1><span class="white">Lassi<br />Lehtinen</span></h1>
+    </header>
+
+    <nav class="topnav">
+        <ul>
+            <!--    The whitespace between the li elements has been commented out to
+                    prevent an unsightly gap from appearing between the navigation items.   -->
+            <li><a href="../../"><span class="lang-fi">Etusivu</span><span class="lang-en">Main</span></a></li><!--
+            --><li class="current-page"><a href="../">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="language-selection">
+            <button type="button" onClick="langSwitch.setLanguage('fi')">Suomeksi</button>
+            <button type="button" onClick="langSwitch.setLanguage('en')">In English</button>
+        </div>
+        <p class="lang-fi"><span class="fas fa-arrow-left"></span> <a href="../">Takaisin</a></p>
+        <p class="lang-en"><span class="fas fa-arrow-left"></span> <a href="../">Back</a></p>
+        <div class="section first lang-fi">
+            <div class="picture-container right">
+                <a href="images/illustration_misalignment.png" title="Klikkaa nähdäksesi täysikokoisen kuvan"><img src="images/illustration_misalignment.jpg" alt="Havainnekuva Resolutionarysta" /></a>
+                <p>
+                    Havainnekuva Resolutionaryn toiminnasta.
+                    Punaisella on merkitty oikeiden peliobjektien sijainti, sinertävällä sijainti ja koko,
+                    jossa Resolutionary ne piirtää.
+                </p>
+            </div>
+            <h2>Resolutionary</h2>
+            <p>
+                Vapaa-ajan projekti
+            </p>
+            <p>
+                <span class="icon fab fa-github"></span>
+                <a href="https://github.com/lclMetal/Resolutionary" title="Resolutionary GitHubissa" class="big">Resolutionary GitHubissa</a>
+            </p>
+            <p>
+                <span class="icon fas fa-book"></span>
+                <a href="https://lclmetal.github.io/Resolutionary/" title="Resolutionaryn dokumentaatio" class="big">Resolutionaryn dokumentaatio</a>
+            </p>
+            <p>
+                Resolutionary on sapluunaprojekti Game Editor -ohjelmalle.
+                Sen tarkoitus on tehdä peleistä automaattisesti resoluution mukaan skaalautuvia.
+            </p>
+            <p>
+                Game Editor on vanhahko ohjelma, eikä siinä ole sisäänrakennettua toimintoa pelin skaalaamiseen.
+                Niinpä Game Editorilla tehdyt pelit ovat &quot;jumissa&quot; siinä resoluutiossa ja
+                kuvasuhteessa, jossa ne on alun perin kehitetty.
+            </p>
+            <p>
+                Resolutionary ratkaisee ongelman käyttämällä Game Editorin canvas-objekteja peliobjektien
+                skaalaamiseen. Järjestelmä ylläpitää listaa niistä objekteista, jotka milloinkin ovat ruudulla,
+                ja piirtää ne sitten resoluution muutoksen mukaan suhteutettuna oikeaan kohtaan näyttöä
+                oikeassa koossa.
+            </p>
+            <p>
+                Resolutionarylla on kattava dokumentaatiosivusto, jossa neuvotaan järjestelmän käyttö
+                askel askeleelta. Lisäksi sivustolla on luonnollisesti dokumentaatio Resolutionaryn funktioista
+                ja niiden käytöstä.
+            </p>
+            <h3>Projektissa hyödyntämäni opit</h3>
+            <ul>
+                <li>linkitetyt listat (dynaaminen muistin varaus: <em>malloc</em>, <em>free</em>)</li>
+                <li>web-suunnittelu (dokumentaatio toteutettu nettisivuna käyttäen <em>HTML</em>- ja <em>CSS</em>-kuvauskieliä</li>
+            </ul>
+        </div>
+        <div class="section first lang-en">
+            <div class="picture-container right">
+                <a href="images/illustration_misalignment.png" title="Click to view the full size picture"><img src="images/illustration_misalignment.jpg" alt="Illustration of Resolutionary in work" /></a>
+                <p>
+                    Illustration of Resolutionary in work. The actual game objects are marked with red. The
+                    scaled game objects as drawn by Resolutionary are marked with the bluish color.
+                </p>
+            </div>
+            <h2>Resolutionary</h2>
+            <p>
+                Hobby project
+            </p>
+            <p>
+                <span class="icon fab fa-github"></span>
+                <a href="https://github.com/lclMetal/Resolutionary" title="Resolutionary on GitHub" class="big">Resolutionary on GitHub</a>
+            </p>
+            <p>
+                <span class="icon fas fa-book"></span>
+                <a href="https://lclmetal.github.io/Resolutionary/" title="Resolutionary documentation" class="big">Resolutionary documentation</a>
+            </p>
+            <p>
+                Resolutionary is a template project for Game Editor. Its purpose is to make games automatically scale to different resolutions.
+            </p>
+            <p>
+                Game Editor is and oldish game creation software and as such, it doesn't have built-in support
+                for making multi-resolution games. This means that games made with Game Editor are effectively
+                &quot;stuck&quot; in the resolution and aspect ratio they were originally built in.
+            </p>
+            <p>
+                Resolutionary solves this problem by utilizing Game Editor's canvas objects to scale the game objects.
+                The system maintains a list of objects currently present on the screen and draws them on the canvas each
+                frame, scaled and positioned in relation to the change in resolution.
+            </p>
+            <p>
+                Resolutionary has a comprehensive documentation website with complete instructions on setting up and using
+                the system, step by step. Naturally, the site also features API documentation of the functions that can
+                be used to customize the behavior of the system.
+            </p>
+            <h3>Some techniques used in the project</h3>
+            <ul>
+                <li>linked lists (dynamic memory allocation: <em>malloc</em>, <em>free</em></li>
+                <li>web design (documentation implemented as a website built with <em>HTML</em> and <em>CSS</em></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <address>
+            <em>
+                Email: lehtinen.lassi.c // gmail
+            </em>
+        </address>
+    </footer>
+
+    <script>
+        let langSwitch = new LanguageSwitcher();
+    </script>
+</body>
+</html>

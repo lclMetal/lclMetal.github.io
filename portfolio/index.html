@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lassi Lehtisen portfolio">
+    <meta name="keywords" content="Ohjelmoija,C,C++,C#,Java,JavaScript">
+    <meta name="author" content="Lassi Lehtinen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link href="styles/styles.css" rel="StyleSheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Ruda|Ruda:400|Ruda:700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bungee%7CRuda" rel="stylesheet"> -->
+    <script src="js/LanguageSwitcher.js"></script>
+    <title>Lassi Lehtinen</title>
+</head>
+<body>
+    <header>
+        <h1><span class="white">Lassi<br />Lehtinen</span></h1>
+    </header>
+
+    <nav class="topnav">
+        <ul>
+            <!--    The whitespace between the li elements has been commented out to
+                    prevent an unsightly gap from appearing between the navigation items.   -->
+            <li class="current-page"><a href="./"><span class="lang-fi">Etusivu</span><span class="lang-en">Main</span></a></li><!--
+            --><li><a href="portfolio/">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="language-selection">
+            <button type="button" onClick="langSwitch.setLanguage('fi')">Suomeksi</button>
+            <button type="button" onClick="langSwitch.setLanguage('en')">In English</button>
+        </div>
+        <div class="section first narrow">
+            <div class="lang-fi">
+            <a href="images/lassi_lehtinen_1000x1000.jpg" title="Klikkaa nähdäksesi täysikokoisen kuvan"><img src="images/lassi_lehtinen_500x500.jpg" alt="Lassi Lehtisen muotokuva" class="picture right round carved"/></a>
+            </div>
+            <div class="lang-en">
+            <a href="images/lassi_lehtinen_1000x1000.jpg" title="Click to see the full size picture"><img src="images/lassi_lehtinen_500x500.jpg" alt="Portrait of Lassi Lehtinen" class="picture right round carved"/></a>
+            </div>
+            <h2 class="lang-fi">Tuleva ohjelmoinnin ammattilainen</h2>
+            <h2 class="lang-en">Future professional programmer</h2>
+            <p>
+                <strong>Lassi Lehtinen</strong><br />
+                <span class="showAge"></span> <span class="display-inline"><span class="lang-fi">vuotta</span><span class="lang-en">years</span></span><br />
+                Jyväskylä
+            </p>
+            <p class="lang-fi">JAMK / Tieto- ja viestintätekniikka / Ohjelmistotekniikka</p>
+            <p class="lang-en">JAMK / Information and communication technology / Software engineering</p>
+        </div>
+        <div class="section lang-fi">
+            <p><b>Hei,</b></p>
+            <p>
+                olen Lassi Lehtinen, <span class="showAge"></span>-vuotias tieto- ja viestintätekniikan opiskelija Jyväskylästä.
+                Suuntautumisekseni olen valinnut ohjelmistotekniikan.
+            </p>
+            <p>
+                Olen harrastanut ohjelmointia yläkouluikäisestä asti. Tuolloin tutustuin
+                <em>Game Editor</em> -nimiseen pelinteko-ohjelmaan, joka käyttää C-ohjelmointikieltä.
+                Kiinnostuin ohjelmoinnista nopeasti, ja huomasin pian olevani enemmän innoissani
+                erilaisten pelimekaniikkojen ohjelmoinnin tarjoamista haasteista kuin pelien
+                tekemisestä.
+            </p>
+            <p>
+                Game Editorin parissa opin paljon C-ohjelmoinnista. Myöhemmin olen
+                ohjelmoinut myös seuraavilla ohjelmointikielillä: C#, Java, C++, JavaScript, PHP ja Elixir.
+                Ohjelmoinnin lisäksi hallitsen HTML- ja CSS-kuvauskielten sujuvan käytön.
+            </p>
+            <p>
+                Tällä sivustolla on näytteitä töistäni niin ohjelmoinnin, web-suunnittelun, kuin
+                grafiikankin osalta.
+            </p>
+            <p><em>Lassi Lehtinen</em></p>
+        </div>
+        <div class="section lang-en">
+            <p><b>Hello,</b></p>
+            <p>
+                I'm Lassi Lehtinen, a <span class="showAge"></span>-year-old ICT student from Jyväskylä, Finland.
+                I've specialised in software engineering.
+            </p>
+            <p>
+                I've programmed ever since I was 14 years old. That's when I found <em>Game Editor</em>,
+                a game creation software that uses the C programming language for scripting game logic
+                and functionality. I quickly got interested in programming and soon noticed myself being
+                more interested in conquering the programming challenges implementing different game
+                mechanics offered than actually making finished games.
+            </p>
+            <p>
+                In my time working with Game Editor I learned a lot about C programming. Later on I've also
+                programmed with the following programming languages: C#, Java, C++, JavaScript, PHP and Elixir.
+                In addition to programming, I am fluent with the HTML and CSS markup languages.
+            </p>
+            <p>
+                This portfolio site presents samples of my work in programming, web design and graphics.
+            </p>
+            <p><em>Lassi Lehtinen</em></p>
+        </div>
+    </div>
+
+    <footer>
+        <address>
+            <em>
+                Email: lehtinen.lassi.c // gmail
+            </em>
+        </address>
+    </footer>
+
+    <script>
+        let langSwitch = new LanguageSwitcher();
+
+        // This script automatically updates my age that is shown on the front page
+        let age;
+        let today = new Date();
+        let birthday = new Date(1995, 5, 12);
+
+        if (today.getMonth() > 5 || (today.getMonth() == 5 && today.getDate() >= 12)) {
+            age = today.getYear() - birthday.getYear();
+        } else {
+            age = today.getYear() - birthday.getYear() - 1;
+        }
+
+        let insertAgeElements = document.getElementsByClassName("showAge");
+        Array.prototype.forEach.call(insertAgeElements, elem => elem.textContent = age);
+    </script>
+</body>
+</html>

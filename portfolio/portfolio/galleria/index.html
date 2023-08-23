@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lassi Lehtisen portfolion galleria">
+    <meta name="keywords" content="Inkscape">
+    <meta name="author" content="Lassi Lehtinen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+    <link href="../../styles/styles.css" rel="StyleSheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Ruda|Ruda:400|Ruda:700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bungee%7CRuda" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/3850b9e2de.js" crossorigin="anonymous"></script>
+    <link href="../../js/lightbox/css/lightbox.css" rel="StyleSheet" type="text/css" />
+    <script src="../../js/LanguageSwitcher.js"></script>
+    <title>Galleria - Portfolio - Lassi Lehtinen</title>
+</head>
+<body>
+    <header>
+        <h1><span class="white">Lassi<br />Lehtinen</span></h1>
+    </header>
+
+    <nav class="topnav">
+        <ul>
+            <!--    The whitespace between the li elements has been commented out to
+                    prevent an unsightly gap from appearing between the navigation items.   -->
+            <li><a href="../../"><span class="lang-fi">Etusivu</span><span class="lang-en">Main</span></a></li><!--
+            --><li class="current-page"><a href="../">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="language-selection">
+            <button type="button" onClick="langSwitch.setLanguage('fi')">Suomeksi</button>
+            <button type="button" onClick="langSwitch.setLanguage('en')">In English</button>
+        </div>
+        <p class="lang-fi"><span class="fas fa-arrow-left"></span> <a href="../">Takaisin</a></p>
+        <p class="lang-en"><span class="fas fa-arrow-left"></span> <a href="../">Back</a></p>
+        <div class="section lang-fi">
+            <h2>Galleria</h2>
+            <p>Inkscapella tehtyjä töitä.</p>
+            <div class="image-container">
+                <a href="images/free-eagle.png" data-lightbox="AlbumFI" data-title="Kotka" data-alt="Tyylitelty kotkasiluetti, alla teksti: 'Eagle fly free'">
+                    <img src="images/free-eagle-thumbnail.jpg" class="pic-thumbnail" alt="Tyylitelty kotkasiluetti, alla teksti: 'Eagle fly free'" />
+                </a>
+                <a href="images/nomad.png" data-lightbox="AlbumFI" data-title="Nomad - logo veljen YouTube-kanavalle" data-alt="Logo, jossa suuri N-kirjain tyyliteltynä Teräsmies-logon tapaan. Logon alla tyylitelty teksti: 'Nomad'">
+                    <img src="images/nomad-thumbnail.jpg" class="pic-thumbnail" alt="Logo, jossa suuri N-kirjain tyyliteltynä Teräsmies-logon tapaan. Logon alla tyylitelty teksti: 'Nomad'" />
+                </a>
+                <a href="images/banecat-times.png" data-lightbox="AlbumFI" data-title="Banecat times - kuvitteellisen viskin etiketti" data-alt="Kuvitteellinen viskipullon etiketti, jossa lännenelokuva-tyylinen maisema, jossa on kaktuksia ja auringonlasku">
+                    <img src="images/banecat-times-thumbnail.jpg" class="pic-thumbnail" alt="Kuvitteellinen viskipullon etiketti, jossa lännenelokuva-tyylinen maisema, jossa on kaktuksia ja auringonlasku" />
+                </a>
+                <a href="images/sabre.png" data-lightbox="AlbumFI" data-title="SABRE - logo peliprojektilleni" data-alt="Logo, jossa lukee: 'SABRE Version 2.0'">
+                    <img src="images/sabre-thumbnail.jpg" class="pic-thumbnail" alt="Logo, jossa lukee: 'SABRE Version 2.0'" />
+                </a>
+            </div>
+        </div>
+        <div class="section lang-en">
+            <h2>Gallery</h2>
+            <p>Pictures made with Inkscape.</p>
+            <div class="image-container">
+                <a href="images/free-eagle.png" data-lightbox="AlbumEN" data-title="Stylized eagle silhouette" data-alt="Stylized eagle silhouette with text: 'Eagle fly free'">
+                    <img src="images/free-eagle-thumbnail.jpg" class="pic-thumbnail" alt="Stylized eagle silhouette with text: 'Eagle fly free'" />
+                </a>
+                <a href="images/nomad.png" data-lightbox="AlbumEN" data-title="Nomad - logo for my brother's YouTube channel" data-alt="Logo with a big N stylized like the Superman logo. Under the logo is a stylized text reading: 'Nomad'">
+                    <img src="images/nomad-thumbnail.jpg" class="pic-thumbnail" alt="Logo with a big N stylized like the Superman logo. Under the logo is a stylized text reading: 'Nomad'" />
+                </a>
+                <a href="images/banecat-times.png" data-lightbox="AlbumEN" data-title="Banecat times - label for an imaginary whiskey brand bottle" data-alt="A fictional whiskey bottle label featuring a western landscape with cacti and a sunset">
+                    <img src="images/banecat-times-thumbnail.jpg" class="pic-thumbnail" alt="A fictional whiskey bottle label featuring a western landscape with cacti and a sunset" />
+                </a>
+                <a href="images/sabre.png" data-lightbox="AlbumEN" data-title="SABRE - logo for my game project" data-alt="A logo reading: 'SABRE Version 2.0'">
+                    <img src="images/sabre-thumbnail.jpg" class="pic-thumbnail" alt="A logo reading: 'SABRE Version 2.0'" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <address>
+            <em>
+                Email: lehtinen.lassi.c // gmail
+            </em>
+        </address>
+    </footer>
+
+    <script src="../../js/lightbox/lightbox-plus-jquery.min.js"></script>
+    <script>
+        let langSwitch = new LanguageSwitcher();
+
+        // speed up modal open/close animation,
+        // disable image transition animations
+        // and enable wrapping between first and last image
+        lightbox.option({
+            fadeDuration: 250,
+            resizeDuration: 0,
+            imageFadeDuration: 0,
+            wrapAround: true
+        });
+    </script>
+</body>
+</html>

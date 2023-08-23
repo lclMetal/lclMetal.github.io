@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lassi Lehtisen portfolion ohjelmointinäyte">
+    <meta name="keywords" content="GitHub,C,Game-Editor,Custom-Text-Renderer,CTR">
+    <meta name="author" content="Lassi Lehtinen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+    <link href="../../styles/styles.css" rel="StyleSheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Ruda|Ruda:400|Ruda:700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bungee%7CRuda" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/3850b9e2de.js" crossorigin="anonymous"></script>
+    <link href="../../js/lightbox/css/lightbox.css" rel="StyleSheet" type="text/css" />
+    <script src="../../js/LanguageSwitcher.js"></script>
+    <title>Aerial Farmer - Portfolio - Lassi Lehtinen</title>
+</head>
+<body>
+    <header>
+        <h1><span class="white">Lassi<br />Lehtinen</span></h1>
+    </header>
+
+    <nav class="topnav">
+        <ul>
+            <!--    The whitespace between the li elements has been commented out to
+                    prevent an unsightly gap from appearing between the navigation items.   -->
+            <li><a href="../../"><span class="lang-fi">Etusivu</span><span class="lang-en">Main</span></a></li><!--
+            --><li class="current-page"><a href="../">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="language-selection">
+            <button type="button" onClick="langSwitch.setLanguage('fi')">Suomeksi</button>
+            <button type="button" onClick="langSwitch.setLanguage('en')">In English</button>
+        </div>
+        <p class="lang-fi"><span class="fas fa-arrow-left"></span> <a href="../">Takaisin</a></p>
+        <p class="lang-en"><span class="fas fa-arrow-left"></span> <a href="../">Back</a></p>
+        <div class="section first lang-fi">
+            <div class="picture-container right">
+                <a href="images/aerial-farmer-04.png" title="Klikkaa nähdäksesi täysikokoisen kuvan"><img src="images/aerial-farmer-04-thumbnail.jpg" alt="Kuvakaappaus Aerial Farmerista, kuvassa farmari ja taivaalta putoava lammas." /></a>
+                <p>
+                    Kuvakaappaus Aerial Farmerista. Kuvassa näkyvät keltaiset nuolet ovat alustaindikaattorit ja sininen nuoli näyttää lampaan putoamiskohdan.
+                </p>
+            </div>
+            <h2>Aerial Farmer</h2>
+            <p>
+                Opiskeluprojekti (TTOS0700 Peliohjelmointi)<br />
+                Yksilötyö<br />
+                Unity<br />
+                2020
+            </p>
+            <p>
+                <a href="https://gitlab.labranet.jamk.fi/m3069-kurssit2020/aerial-farmer" title="Aerial Farmer GitLabissa">Aerial Farmer GitLabissa</a>
+                <span class="icon fas fa-external-link-alt fa-smaller"></span><br />
+                <a href="" title="Pelaa Aerial Farmeria">Pelaa Aerial Farmeria (WebGL)*</a>
+                <span class="icon fas fa-external-link-alt fa-smaller"></span><br/>
+                <a href="https://student.labranet.jamk.fi/~M3069/ttos0700-peliohjelmointi/unity/aerial-farmer/Builds/Windows/AerialFarmer-Windows.zip" title="Lataa Aerial Farmer (Windows x64)">Lataa Aerial Farmer (Windows x64)</a>
+                <span class="icon fas fa-download fa-smaller"></span>
+            </p>
+            <p class="small-note">
+                *WebGL-versiossa äänen panorointi ei toimi, syynä on Unity WebGL:n muita versioita rajoitettuneempi audiojärjestelmä. Lisätietoja: <a href="https://docs.unity3d.com/Manual/webgl-audio.html">Unity Manual: Using Audio in WebGL</a>.
+            </p>
+            <p>
+                Aerial Farmer on JAMK:n Peliohjelmointi-kurssille tehty harjoitustyö. Pelissä ohjataan farmaria, joka yrittää pelastaa taivaalta putoavia lampaitaan. Pelissä on yksi taso.
+            </p>
+            <h3>Pelimekaniikat</h3>
+            <p>
+                Farmarin tehtävää vaikeuttaa se, että osa lampaista putoaa ilmassa leijailevien alustojen päälle ja alustat ovat näkymättömiä. Farmarilla on kuitenkin apunaan alustaindikaattorit, jotka yhdessä osoittavat lähimmän alustan sijainnin, toinen vaaka-akselilla ja toinen pystyakselilla. Kun farmari on kerran laskeutunut alustan päälle, se pysyy näkyvänä, vaikka pelaaja hyppäisi siitä pois.
+            </p>
+            <div class="image-container justify-start">
+                <a href="images/aerial-farmer-01.png" data-lightbox="AlbumFI" data-title="Farmari ensimmäisellä alustalla" data-alt="Kuvakaappaus, jossa farmari seisoo ensimmäisellä alustalla."><img src="images/aerial-farmer-01-thumbnail.jpg" class="pic-thumbnail" alt="Kuvakaappaus, jossa farmari seisoo ensimmäisellä alustalla." /></a>
+                <a href="images/aerial-farmer-02.png" data-lightbox="AlbumFI" data-title="Lammas putoaa farmarin ohi" data-alt="Kuvakaappaus lampaasta putoamassa alustalla seisovan farmarin ohi."><img src="images/aerial-farmer-02-thumbnail.jpg" class="pic-thumbnail" alt="Kuvakaappaus lampaasta putoamassa alustalla seisovan farmarin ohi." /></a>
+                <a href="images/aerial-farmer-03.png" data-lightbox="AlbumFI" data-title="Sininen nuoli näyttää mihin lammas tulee putoamaan" data-alt="Kuvakaappaus farmarista seisomassa massa. Sininen nuoli osoittaa alas taivaalta maahan farmarin vieressä."><img src="images/aerial-farmer-03-thumbnail.jpg" class="pic-thumbnail" alt="Sininen nuoli osoittaa alas taivaalta maahan farmarin vieressä." /></a>
+                <a href="images/aerial-farmer-04.png" data-lightbox="AlbumFI" data-title="Lammas on lähellä pudota maahan" data-alt="Kuvakaappaus, jossa lammas on putoamaisillaan maahan farmarin viereen."><img src="images/aerial-farmer-04-thumbnail.jpg" class="pic-thumbnail" alt="Kuvakaappaus, jossa lammas on putoamaisillaan maahan farmarin viereen." /></a>
+                <a href="images/aerial-farmer-05.png" data-lightbox="AlbumFI" data-title="Lähin alusta on ylös ja vasemmalle farmarista" data-alt="Kuvakaappaus, jossa näkyy alustalla seisova farmari ja kaksi keltaista nuolta, joista toinen osoittaa vasemmalle ja toinen ylös farmarista."><img src="images/aerial-farmer-05-thumbnail.jpg" class="pic-thumbnail" alt="Kuvakaappaus, jossa näkyy alustalla seisova farmari ja kaksi keltaista nuolta, joista toinen osoittaa vasemmalle ja toinen ylös farmarista." /></a>
+            </div>
+        </div>
+        <div class="section first lang-en">
+            <div class="picture-container right">
+                <a href="images/aerial-farmer-04.png" title="Click to view the full size picture"><img src="images/aerial-farmer-04-thumbnail.jpg" alt="Screenshot of Aerial Farmer, featuring the farmer and a sheep falling from the sky." /></a>
+                <p>
+                    Screenshot of Aerial Farmer. The yellow arrows are the platform indicators and the blue arrow shows where the sheep will fall.
+                </p>
+            </div>
+            <h2>Aerial Farmer</h2>
+            <p>
+                School project (TTOS0700 Game Programming)<br />
+                Individual work<br />
+                Unity<br />
+                2020
+            </p>
+            <p>
+                <a href="https://gitlab.labranet.jamk.fi/m3069-kurssit2020/aerial-farmer" title="Aerial Farmer on GitLab">Aerial Farmer on GitLab</a>
+                <span class="icon fas fa-external-link-alt fa-smaller"></span><br />
+                <a href="" title="Play Aerial Farmeria">Play Aerial Farmer (WebGL)*</a>
+                <span class="icon fas fa-external-link-alt fa-smaller"></span><br/>
+                <a href="https://student.labranet.jamk.fi/~M3069/ttos0700-peliohjelmointi/unity/aerial-farmer/Builds/Windows/AerialFarmer-Windows.zip" title="Download Aerial Farmer (Windows x64)">Download Aerial Farmer (Windows x64)</a>
+                <span class="icon fas fa-download fa-smaller"></span>
+            </p>
+            <p class="small-note">
+                *Sound panning doesn't work in the WebGL build. The reason for this is that Unity's audio system is more limited on the WebGL platform than other supported platforms. More information: <a href="https://docs.unity3d.com/Manual/webgl-audio.html">Unity Manual: Using Audio in WebGL</a>.
+            </p>
+            <p>
+                Aerial Farmer is a game built as the main assignment of the Game Programming course at JAMK. In Aerial Farmer the player controls a farmer trying to save his sheep that are falling from the sky. The game has one level.
+            </p>
+            <h3>Game mechanics</h3>
+            <p>
+                The farmer's task is further complicated by the fact that some of the sheep will fall on invisible platforms floating in the air. Luckily, the farmer has his trusty platform indicators to help him in his task. The two indicators together combine to visualize the location of the nearest platform. One indicator shows the platform's location on the horizontal axis and the other one on the vertical axis. Once the farmer has stepped on a platform the platform will stay visible even if the farmer jumped off of it.
+            </p>
+            <div class="image-container justify-start">
+                <a href="images/aerial-farmer-01.png" data-lightbox="AlbumEN" data-title="Farmer standing on the first platform" data-alt="A screenshot of the farmer standing on the first platform."><img src="images/aerial-farmer-01-thumbnail.jpg" class="pic-thumbnail" alt="A screenshot of the farmer standing on the first platform." /></a>
+                <a href="images/aerial-farmer-02.png" data-lightbox="AlbumEN" data-title="A sheep falling right past the farmer" data-alt="A screenshot of a sheep falling right past the farmer standing on a platform."><img src="images/aerial-farmer-02-thumbnail.jpg" class="pic-thumbnail" alt="A screenshot of a sheep falling right past the farmer standing on a platform." /></a>
+                <a href="images/aerial-farmer-03.png" data-lightbox="AlbumEN" data-title="Blue indicator shows where a sheep will land" data-alt="A screenshot of the farmer standing on the ground. There's a blue arrow pointing from the sky down to the ground next to him."><img src="images/aerial-farmer-03-thumbnail.jpg" class="pic-thumbnail" alt="A screenshot of the farmer standing on the ground. There's a blue arrow pointing from the sky down to the ground next to him." /></a>
+                <a href="images/aerial-farmer-04.png" data-lightbox="AlbumEN" data-title="The sheep is about to hit the ground soon" data-alt="A screenshot showing a sheep falling from the sky to the ground next to the farmer."><img src="images/aerial-farmer-04-thumbnail.jpg" class="pic-thumbnail" alt="A screenshot showing a sheep falling from the sky to the ground next to the farmer." /></a>
+                <a href="images/aerial-farmer-05.png" data-lightbox="AlbumEN" data-title="The closest platform is up and to the left of the farmer" data-alt="A screenshot showing the farmer standing on a platform with one yellow arrow pointing to the left of him and the another arrow pointing upwards from him."><img src="images/aerial-farmer-05-thumbnail.jpg" class="pic-thumbnail" alt="A screenshot showing the farmer standing on a platform with one yellow arrow pointing to the left of him and the another arrow pointing upwards from him." /></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <address>
+            <em>
+                Email: lehtinen.lassi.c // gmail
+            </em>
+        </address>
+    </footer>
+
+    <script src="../../js/lightbox/lightbox-plus-jquery.min.js"></script>
+    <script>
+        let langSwitch = new LanguageSwitcher();
+
+        // speed up modal open/close animation,
+        // disable image transition animations
+        // and enable wrapping between first and last image
+        lightbox.option({
+            fadeDuration: 250,
+            resizeDuration: 0,
+            imageFadeDuration: 0,
+            wrapAround: true
+        });
+    </script>
+</body>
+</html>

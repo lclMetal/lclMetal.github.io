@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lassi Lehtisen portfolion ohjelmointinäyte">
+    <meta name="keywords" content="GitHub,C,Game-Editor,Custom-Text-Renderer,CTR">
+    <meta name="author" content="Lassi Lehtinen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+    <link href="../../styles/styles.css" rel="StyleSheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Ruda|Ruda:400|Ruda:700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bungee%7CRuda" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/3850b9e2de.js" crossorigin="anonymous"></script>
+    <script src="../../js/LanguageSwitcher.js"></script>
+    <title>Custom text renderer - Portfolio - Lassi Lehtinen</title>
+</head>
+<body>
+    <header>
+        <h1><span class="white">Lassi<br />Lehtinen</span></h1>
+    </header>
+
+    <nav class="topnav">
+        <ul>
+            <!--    The whitespace between the li elements has been commented out to
+                    prevent an unsightly gap from appearing between the navigation items.   -->
+            <li><a href="../../"><span class="lang-fi">Etusivu</span><span class="lang-en">Main</span></a></li><!--
+            --><li class="current-page"><a href="../">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="language-selection">
+            <button type="button" onClick="langSwitch.setLanguage('fi')">Suomeksi</button>
+            <button type="button" onClick="langSwitch.setLanguage('en')">In English</button>
+        </div>
+        <p class="lang-fi"><span class="fas fa-arrow-left"></span> <a href="../">Takaisin</a></p>
+        <p class="lang-en"><span class="fas fa-arrow-left"></span> <a href="../">Back</a></p>
+        <div class="section first lang-fi">
+            <div class="picture-container right">
+                <img src="images/ctr.png" alt="Havainnekuva CTR:llä renderöidystä tekstistä." />
+                <p>
+                    Havainnekuva CTR:llä renderöidystä tekstistä.<br />
+                    Teksti on keskitetty, ja siinä on montaa eri väriä.
+                </p>
+            </div>
+            <h2>CTR - Custom Text Renderer</h2>
+            <p>
+                Vapaa-ajan projekti
+            </p>
+            <p>
+                <span class="icon fab fa-github"></span>
+                <a href="https://github.com/lclMetal/Custom-Text-Renderer" title="CTR GitHubissa" class="big">CTR GitHubissa</a>
+            </p>
+            <p>
+                CTR on sapluunaprojekti Game Editor -ohjelmalle.
+                Sen tarkoitus on helpottaa tekstielementtien käyttöä peleissä.
+            </p>
+            <p>
+                Vanhahkon Game Editorin sisäänrakennettu tekstitoiminnallisuus on puutteellista.
+                Tekstiä ei voi tasata oikealle eikä keskittää, ja jokainen yksittäinen tekstikokonaisuus
+                on yksivärinen. Ongelmia aiheuttaa myös se, että Game Editor ei pysty laskemaan tekstin
+                leveyttä ja korkeutta oikein. Myös automaattinen rivitys puuttuu.
+            </p>
+            <p>
+                CTR ratkaisee nämä ongelmat tekemällä oikeastaan kaiken alusta asti itse.
+                CTR ei käytä Game Editorin sisäänrakennettua tekstijärjestelmää ollenkaan, vaan jokainen
+                merkki on oma peliobjektinsa, ja kirjaimet ovat oikeasti kuvia, eivätkä fontteja. Tämä
+                tietysti aiheuttaa omat rajoitteensa mm. välistyksen ym. kanssa, mutta saavutetut edut
+                korvaavat mielestäni nämä puutteet moninkertaisesti.
+            </p>
+            <h3>Font Tool</h3>
+            <p>
+                Koska CTR tukee vain kuvamuodossa olevia fontteja, sen mukana tulee työkalu nimeltä <em>Font Tool</em>, jolla
+                voi helposti luoda kuvafontin mistä tahansa tavallisesta fontista. Myös Font Tool on tehty Game Editorissa.
+            </p>
+            <p>
+                Käyttäjä syöttää kuvamuotoon käännettävän fontin nimen (fontin täytyy olla asennettuna tietokoneelle) ja
+                kirjasimen koon Font Tooliin. Annettujen tietojen perusteella työkalu luo .svg-tiedoston, jossa on kaikki
+                normaalit ASCII-merkit aseteltuna siten, että koko kirjasinjoukko on helppo viedä (exportata) Inkscapesta
+                spritesheetinä, jossa kaikki merkit ovat pystyrivissä.
+            </p>
+            <div class="picture-container right">
+                <a href="images/font_tool.png" title="Klikkaa nähdäksesi täysikokoisen kuvan"><img src="images/font_tool_small.jpg" alt="Kuvakaappaus Font Toolista. Kuvassa näkyy työkalun tarjoamat asetukset sekä esikatseluteksti." /></a>
+                <p>
+                    Font Tool.
+                </p>
+            </div>
+            <p>
+                Kuvamuotoisen fontin luonnin jälkeen se voidaan tuoda Font Tooliin fontin asetusten säätämiseksi. Säädettäviä
+                asetuksia ovat kirjainten välistys, sanojen välistys (välilyönnin koko), rivivälistys sekä sisennyksen koko.
+                Asetuksia säädettäessä esikatseluteksti näyttää tulokset reaaliajassa. Kun käyttäjä on tyytyväinen tuloksiin,
+                fontin data ja asetukset voidaan viedä työkalusta kahdessa formaatissa: <em>code</em> ja <em>data</em>.
+            </p>
+            <p>
+                <strong>Code</strong>-formaatti luo .c-tiedoston, jossa on fontin asetuksilla ja sen merkkien leveyksillä
+                (pikseleinä) alustettu Font-struct (CTR:n oma datatyyppi).
+            </p>
+            <p>
+                <strong>Data</strong>-formaatti puolestaan luo binäärimuotoisen tiedoston .fdf-tiedostopäätteellä. Tiedosto
+                sisältää kaiken vastaavan datan kuin code formaatin tiedosto.
+            </p>
+            <p>
+                Code-formaatissa olevaa dataa käytetään kopioimalla tiedoston sisältö Game Editoriin. Data-formaatissa viety
+                fonttidata taas luetaan CTR:n API-funktiolla <code>readFontDataFile</code>.
+            </p>
+            <h3>CTR:n ominaisuuksia</h3>
+            <ul>
+                <li>Tekstin tasaus vasemmalle / oikealle sekä tekstin keskitys</li>
+                <li>Automaattinen rivitys</li>
+                <li>Mahdollisuus muuttaa tekstin väriä missä tahansa kohtaa tekstiä</li>
+                <li>Tekstin sovittaminen annetun kokoiseen alueeseen (tarvittaessa rullaus)</li>
+            </ul>
+            <p>Alla CTR:n ominaisuuksien esittelyvideo.</p>
+            <p class="yt-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/g_q5VWQEdx4" allowfullscreen></iframe></p>
+        </div>
+        <div class="section first lang-en">
+            <div class="picture-container right">
+                <img src="images/ctr.png" alt="Illustration of text rendered with CTR." />
+                <p>
+                    Illustration of text rendered with CTR.<br />
+                    The text has been centered and it's rendered in multiple colors.
+                </p>
+            </div>
+            <h2>CTR - Custom Text Renderer</h2>
+            <p>
+                Hobby project
+            </p>
+            <p>
+                <span class="icon fab fa-github"></span>
+                <a href="https://github.com/lclMetal/Custom-Text-Renderer" title="CTR on GitHub" class="big">CTR on GitHub</a>
+            </p>
+            <p>
+                CTR is a template project for Game Editor.
+                Its purpose is to make easier to use text elements in games.
+            </p>
+            <p>
+                The built-in text elements in Game Editor are quite lacking in features.
+                They can't be aligned right or centered and each text element can only feature
+                a single color. Game Editor also fails to calculate the width and height of text elements correctly.
+                The built-in text elements also don't support automatic line wrapping.
+            </p>
+            <p>
+                CTR solves these problems by basically redoing everything from the ground up.
+                CTR doesn't utilize the built-in text elements of Game Editor at all. In CTR, each character is
+                an individual game object (a clone), and the letters are actually just sprites, not glyphs of a font.
+                This does place some limits on the accuracy of things such as kerning but I think the advantages gained
+                significantly outweigh the disadvantages of the approach.
+            </p>
+            <h3>Font Tool</h3>
+            <p>
+                As CTR uses image fonts it comes shipped with a custom made tool for creating image fonts out of any font.
+                The tool is built in Game Editor too.
+            </p>
+            <p>
+                The user inputs the name and size of the font they want to convert (it has
+                to be a font available on the machine). The tool will then generate an .svg file containing the basic ASCII
+                character set composed in such a way that it is very simple to export the collection of characters from Inkscape
+                as a single spritesheet where the characters are arranged in a vertical column.
+            </p>
+            <div class="picture-container right">
+                <a href="images/font_tool.png" title="Click to view the full size picture"><img src="images/font_tool_small.jpg" alt="Screenshot of Font Tool, showing the basic setting controls and preview text." /></a>
+                <p>
+                    Font Tool.
+                </p>
+            </div>
+            <p>
+                After generating the image font it can be imported back into the Font Tool for adjusting the settings of the font
+                (letter spacing, word spacing, line spacing and indentation). The settings can be adjusted with a preview text
+                showing the results in realtime. When the user is content with the results they can export the font data in one
+                of 2 formats: <em>code</em> or <em>data</em>.
+            </p>
+            <p>
+                <strong>The code format</strong> produces a .c file with a Font struct (a custom data type used by CTR)
+                initialized with the settings to be used with the font as well as the width of each of the characters in pixels.
+            </p>
+            <p>
+                <strong>The data format</strong> produces a binary file with the extension .fdf containing the settings to be
+                used with the font as well as the width of each of the characters in pixels.
+            </p>
+            <p>
+                The code format is used by copying the contents of the file into Game Editor and the data file is used by loading the data with CTR API function <code>readFontDataFile</code>.
+            </p>
+            <h3>Some features of CTR</h3>
+            <ul>
+                <li>Text alignment to left / right as well as text centering</li>
+                <li>Automatic line wrapping</li>
+                <li>Support for altering the letter color at any point even in the middle of text</li>
+                <li>Fitting text to an area of given size (with scrolling if required)</li>
+            </ul>
+            <p>Below is a short showcase video of the features and usage of CTR.</p>
+            <p class="yt-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/g_q5VWQEdx4" allowfullscreen></iframe></p>
+        </div>
+    </div>
+
+    <footer>
+        <address>
+            <em>
+                Email: lehtinen.lassi.c // gmail
+            </em>
+        </address>
+    </footer>
+
+    <script>
+        let langSwitch = new LanguageSwitcher();
+    </script>
+</body>
+</html>

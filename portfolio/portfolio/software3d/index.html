@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lassi Lehtisen portfolion ohjelmointinäyte">
+    <meta name="keywords" content="GitHub,C,Game-Editor,Software3D">
+    <meta name="author" content="Lassi Lehtinen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+    <link href="../../styles/styles.css" rel="StyleSheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Ruda|Ruda:400|Ruda:700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bungee%7CRuda" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/3850b9e2de.js" crossorigin="anonymous"></script>
+    <script src="../../js/LanguageSwitcher.js"></script>
+    <title>Software3D - Portfolio - Lassi Lehtinen</title>
+</head>
+<body>
+    <header>
+        <h1><span class="white">Lassi<br />Lehtinen</span></h1>
+    </header>
+
+    <nav class="topnav">
+        <ul>
+            <!--    The whitespace between the li elements has been commented out to
+                    prevent an unsightly gap from appearing between the navigation items.   -->
+            <li><a href="../../"><span class="lang-fi">Etusivu</span><span class="lang-en">Main</span></a></li><!--
+            --><li class="current-page"><a href="../">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="language-selection">
+            <button type="button" onClick="langSwitch.setLanguage('fi')">Suomeksi</button>
+            <button type="button" onClick="langSwitch.setLanguage('en')">In English</button>
+        </div>
+        <p class="lang-fi"><span class="fas fa-arrow-left"></span> <a href="../">Takaisin</a></p>
+        <p class="lang-en"><span class="fas fa-arrow-left"></span> <a href="../">Back</a></p>
+        <div class="section first lang-fi">
+            <div class="picture-container right">
+                <img src="images/sphere.png" alt="Software3D:n piirtämä pallo" />
+                <p>
+                    Havainnekuva Software3D:n toiminnasta.
+                </p>
+            </div>
+            <h2>Software3D</h2>
+            <p>
+                Vapaa-ajan projekti
+            </p>
+            <p>
+                <span class="icon fab fa-github"></span>
+                <a href="https://github.com/lclMetal/software3D" title="Software3D GitHubissa" class="big">Software3D GitHubissa</a>
+            </p>
+            <p>
+                Software3D (työnimi) on alkeellinen 3D-moottori Game Editorille.
+            </p>
+            <p>
+                Game Editor on 2D-pelien tekemiseen suunniteltu ohjelma, eikä se siis
+                sisällä minkäänlaista 3D-moottoria itsessään. Software3D on koodattu
+                <em>David Rousset</em>:n kirjoittaman tutoriaalin pohjalta. Moottorin vaatimat
+                vektori- ja matriisilaskukirjastot toteutin itse, sillä Game Editor ei tue
+                ulkopuolisten kirjastojen käyttöä. Käytin mallina eri lähteiden toteutuksia
+                tarvitsemistani funktioista.
+            </p>
+            <p>
+                Tällä hetkellä moottori osaa lukea kolmioiksi pilkottuja 3D-malleja .obj-tiedostoista.
+                Kolmioiden värittäminen pikseli pikseliltä ei onnistuisi reaaliajassa, joten kehitin vaihtoehtoisen
+                ratkaisun kolmioiden täyttämiseen.
+            </p>
+            <p>
+                Projektin data-kansiosta löytyy 46 kuvaa, joissa jokaisessa on
+                suorakulmainen kolmio 180:ssä eri kulmassa, siis pyöritettynä ympäri kahden asteen välein.
+                Ensimmäinen tiedosto on kolmiosta, jonka ensimmäinen kulma on 1 aste, seuraava kolmiosta, jonka ensimmäinen
+                kulma on 3 astetta, ja aina kahden asteen välein 89 asteeseen asti.
+            </p>
+            <p>
+                Moottori voi käyttää näitä valmiiksi renderöityjä kolmioita värittämään minkä tahansa muotoisen ja kokoisen
+                kolmion millä tahansa värillä. Se tapahtuu seuraavin vaihein:
+            </p>
+            <ol>
+                <li>Jaa väritettävä kolmio kahdeksi suorakulmaiseksi kolmioksi</li>
+                <li>Valitse valmiiksi renderöidyistä kolmiospriteistä ne, jotka parhaiten vastaavat kahta saatua suorakulmaista kolmiota</li>
+                <li>Sävytä valitut kolmiot oikean värisiksi säätämällä peliobjektien r, g ja b arvoja</li>
+                <li>Käytä Game Editorin <code>draw_from</code> funktiota piirtämään valitut kolmiot oikeisiin kohtiin
+                canvas-objektilla, oikeaan kokoon skaalattuina</li>
+            </ol>
+            <p class="small-note">(Game Editor tukee skaalaamista vain <code>draw_from</code> funktion kautta, eikä se tue
+                rotaatiota. Siksi rotaatio täytyy olla valmiiksi renderöitynä kolmiospritesheetissä.)</p>
+            <p>Alla esikatseluvideo Software3D:n piirtämästä harmaasta pallosta.</p>
+            <p class="yt-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/im8DZ2Gioeo" allowfullscreen></iframe></p>
+        </div>
+        <div class="section first lang-en">
+            <div class="picture-container right">
+                <img src="images/sphere.png" alt="A low poly sphere rendered with Software3D" />
+                <p>
+                    A low poly sphere rendered with Software3D.
+                </p>
+            </div>
+            <h2>Software3D</h2>
+            <p>
+                Hobby project
+            </p>
+            <p>
+                <span class="icon fab fa-github"></span>
+                <a href="https://github.com/lclMetal/software3D" title="Software3D on GitHub" class="big">Software3D on GitHub</a>
+            </p>
+            <p>
+                Software3D (working title) is a simplistic work-in-progress 3D engine implemented in Game Editor.
+            </p>
+            <p>
+                Game Editor is a game creation software designed for creating 2D games and thus has no 3D graphics engine.
+                Software3D is programmed based on a tutorial written by <em>David Rousset</em>. The required vector and matrix
+                libraries needed to be implemented by manually as Game Editor doesn't include such and also doesn't allow
+                including 3rd party libraries, most likely for security reasons. When programming the math library I used
+                several different vector and matrix math libraries implementations as reference.
+            </p>
+            <p>
+                At its current stage, the engine can read triangulated 3D models exported in the .obj file format.
+                Because coloring the triangles pixel by pixel is not feasible with Game Editor I had to come up with an
+                alternative solution for coloring them.
+            </p>
+            <p>
+                In the data folder of the project are 46 images, each of which contains a right triangle in 180 different
+                angles, that is, rotated 360 degrees in 2 degree steps. The first image features a triangle with its first
+                angle the size of 1 degree. The next image has a triangle with its first angle the size of 3 degrees and so
+                on all the way to 89 degrees in 2 degree steps.
+            </p>
+            <p>
+                The engine can use these pre-rendered triangles to color a triangle of any shape and size with any color.
+                The steps required are as follows:
+            </p>
+            <ol>
+                <li>Split the triangle to 2 right triangles</li>
+                <li>Pick the 2 pre-rendered triangle sprites that best match the 2 right triangles</li>
+                <li>Colorize the selected triangles by adjusting the r, g and b values of the game objects</li>
+                <li>Use Game Editor's built-in <code>draw_from</code> function to draw the selected triangles to the correct position on the &quot;screen&quot; canvas, scaled to the correct size</li>
+            </ol>
+            <p class="small-note">(Game Editor only supports scaling via the <code>draw_from</code> function and there's no support for rotation. That's why it needs to be pre-rendered to the triangle sprite sheet.)</p>
+            <p>Below is a short preview video of a grey low poly sphere rendered by Software3D.</p>
+            <p class="yt-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/im8DZ2Gioeo" allowfullscreen></iframe></p>
+        </div>
+    </div>
+
+    <footer>
+        <address>
+            <em>
+                Email: lehtinen.lassi.c // gmail
+            </em>
+        </address>
+    </footer>
+
+    <script>
+        let langSwitch = new LanguageSwitcher();
+    </script>
+</body>
+</html>

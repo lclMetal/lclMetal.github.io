@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lassi Lehtisen portfolion ohjelmointinäyte">
+    <meta name="keywords" content="GitHub,C,Game-Editor,Custom-Text-Renderer,CTR">
+    <meta name="author" content="Lassi Lehtinen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+    <link href="../../styles/styles.css" rel="StyleSheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Ruda|Ruda:400|Ruda:700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bungee%7CRuda" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/3850b9e2de.js" crossorigin="anonymous"></script>
+    <link href="../../js/lightbox/css/lightbox.css" rel="StyleSheet" type="text/css" />
+    <script src="../../js/LanguageSwitcher.js"></script>
+    <title>Launch-A-Sloth - Portfolio - Lassi Lehtinen</title>
+</head>
+<body>
+    <header>
+        <h1><span class="white">Lassi<br />Lehtinen</span></h1>
+    </header>
+
+    <nav class="topnav">
+        <ul>
+            <!--    The whitespace between the li elements has been commented out to
+                    prevent an unsightly gap from appearing between the navigation items.   -->
+            <li><a href="../../"><span class="lang-fi">Etusivu</span><span class="lang-en">Main</span></a></li><!--
+            --><li class="current-page"><a href="../">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="language-selection">
+            <button type="button" onClick="langSwitch.setLanguage('fi')">Suomeksi</button>
+            <button type="button" onClick="langSwitch.setLanguage('en')">In English</button>
+        </div>
+        <p class="lang-fi"><span class="fas fa-arrow-left"></span> <a href="../">Takaisin</a></p>
+        <p class="lang-en"><span class="fas fa-arrow-left"></span> <a href="../">Back</a></p>
+        <div class="section first lang-fi">
+            <div class="picture-container right">
+                <a href="images/launch-a-sloth-03.jpg" title="Klikkaa nähdäksesi täysikokoisen kuvan"><img src="images/launch-a-sloth-03-thumbnail.jpg" alt="Kuvakaappaus pelin toisesta tasosta, kuvassa Thud tykissä, jota pelaaja parhaillaan tähtää kohti kerättävää lehteä." /></a>
+                <p>
+                    Kuvakaappaus pelistä.
+                </p>
+            </div>
+            <h2>Launch-A-Sloth</h2>
+            <p>
+                Opiskeluprojekti (TTOW0221 Game Development Project)<br />
+                Ryhmätyö (5 hlö)<br />
+                Pelisuunnittelu, Pelinkehitys, Ohjelmointi<br />
+                Unity<br />
+                2021
+            </p>
+            <p>
+                <a href="https://student.labranet.jamk.fi/~M3069/launch-a-sloth/" title="Pelaa Launch-A-Slothia">Pelaa Launch-A-Slothia (WebGL)*</a>
+                <span class="icon fas fa-external-link-alt fa-smaller"></span><br/>
+                <a href="https://student.labranet.jamk.fi/~M3069/launch-a-sloth/Launch-A-Sloth_28-04-2021.apk" title="Lataa Launch-A-Sloth (Android .apk)">Lataa Launch-A-Sloth (Android .apk)</a>
+                <span class="icon fas fa-download fa-smaller"></span>
+            </p>
+            <p class="small-note">
+                *Dynaaminen musiikki -ominaisuus ei toimi pelin WebGL-versiossa. Syynä on Unity WebGL:n muita versioita rajoitettuneempi audiojärjestelmä. Lisätietoja: <a href="https://docs.unity3d.com/Manual/webgl-audio.html">Unity Manual: Using Audio in WebGL</a>
+            </p>
+            <p>
+                Launch-A-Sloth on peli, jota olin mukana kehittämässä osana JAMK:n pelinkehitysmoduulin TTOW0221 Game Development Project -kurssia. Kyseessä on 2D fysiikkapulmapeli, jossa pelaajan täytyy auttaa kotipuustaan pudonnut laiskianen nimeltä Thud takaisin kotiinsa vuorenhuipulle ampumalla hänet tykillä ylös vuorenrinnettä. Pelissä on 11 tasoa.
+            </p>
+            <h3>Pelimekaniikat</h3>
+            <p>
+                Pelaajan täytyy kimpoiluttaa Thudia kenttien seinistä saadakseen tämän kunkin kentän maalille. Jokaisella kentällä on maksimikimpoilumäärä, jonka Thud saa käyttää. Jos pelaaja ei saa Thudia maaliin annetulla määrällä kimpoiluja, hänen täytyy yrittää uudestaan erilaisilla kulma- ja voima-asetuksilla.
+            </p>
+            <p>
+                Jokaisessa tasossa on 2 kerättävää objektia. Ensimmäinen on tähti, joka on kentän maali ja joka siten on pakko saavuttaa, jotta voi päästä seuraavalle kentälle. Toinen kerättävä kohde on lehti, jonka kerääminen on vapaaehtoinen lisähaaste, jonka suorittamalla voi saada paremman tähtiluokituksen tasosta.
+            </p>
+            <p>
+                Kun pelaaja saavuttaa kentän maalina toimivan tähden, hänelle annetaan kentästä 1-3:n tähden luokitus seuraavin perustein:
+            </p>
+            <ul>
+                <li>1 tähti kentän läpäisemisestä</li>
+                <li>+1 tähti kentän läpäisemisestä käyttäen alle 50% annetuista kimpoiluista</li>
+                <li>+1 tähti lehden keräämisestä</li>
+            </ul>
+            <h3>Edistyneet ominaisuudet</h3>
+            <p>
+                Pelissä on dynaaminen musiikki -ominaisuus, joka kiihdyttää musiikin nopeutta aina, kun pelaaja laukaisee Thudin tykistä. Olin vastuussa ominaisuuden ohjelmoinnista. Jokaisesta taustamusiikkikappaleesta on kaksi versiota, normaali ja tuplatempoversio. Peli vaihtaa näiden kahden välillä ohjelmallisesti. Kappale, johon vaihdetaan, täytyy "kelata" oikeaan kohtaan, joka saadaan joko jakamalla tai kertomalla soivan kappaleen toiston sijainti kahdella, riippuen siitä vaihdetaanko normaalista tuplanopeuteen vai päinvastoin.
+            </p>
+            <p>
+                Taustamusiikista on kolme versiota, kesäteema, syksyteema ja talviteema, joiden välillä vaihdetaan tason teeman perusteella. Jokaisesta näistä on normaali- ja tuplatempoiset versiot. Syksy- ja talviteemojen perustempo on matalampi kuin kesäteeman, mikä aiheuttaa lisähaasteita musiikin vaihtamiseen, sillä vaihto kesäteemasta syksy- tai talviteemaan tai päinvastoin yhtä yksinkertaista kuin nopeamman ja hitaamman version välillä vaihtaminen, sillä tempojen suhde ei enää olekaan aina 1:2. Ratkaisin ongelman tekemällä kaikkien tempojen välisistä suhteista matriisin, josta kappaletta vaihdettaessa voidaan lukea oikea muuntokerroin nykyisen kappaleen id:n ja sen tilalle halutun kappaleen id:n perusteella.
+            </p>
+            <h3>Roolini projektissa</h3>
+            <p>
+                Pelinkehitysprojektissa roolejani olivat pelisuunnittelija, pelinkehittäjä ja ohjelmoija. Suunnittelin alkuperäisen peli-idean pelinkehitysmoduulin yksilötyönä tehdyn TTOW0211 Basics of Game Design -kurssin harjoitustyönä. Ideani valikoitui noin viidentoista idean joukosta. Ideoista valittiin kolme, joita lähdettiin kehittämään kurssin opiskelijoista muodostetuissa ryhmissä. Projektin aikana olin aktiivisesti mukana pelisuunnittelussa ja -suunnittelukysymyksiä pohdittaessa.
+            </p>
+            <p>
+                Pelinkehittäjänä ja ohjelmoijana olin mukana rakentamassa peliä Unity-pelimoottorilla. Yllä mainitun musiikkiominaisuuden lisäksi otin vastuulleni Unity-projektin organisoinnin. Tein peliobjekteista uudelleenkäytettäviä prefabeja sekä loin kopioitavan templaattiscenen tasojen luomista varten. Lisäksi ohjelmoin muun muassa askelluksen kulman- ja voimansäätöön. Askellukseen liittyen ohjelmoin Unity-editoriin visualisoinnin tykille tasokohtaisesti asetetuista minimi- ja maksimikulmista sekä käytetystä askelluksesta ja aloituskulmasta. Visualisointityökalut tekivät asetusten säätämisestä helpompaa, sillä kehittäjän ei tarvinnut enää testata asetuksia joka välissä ajamalla peliä.
+            </p>
+            <p>
+                Tasokohtaiset askellus- ja rajoitusasetukset jäivät kuitenkin projektin päättövaiheen kiireessä hienosäätämättä joidenkin tasojen kohdalla, mikä tekee kyseisten tasojen pelikokemuksesta hieman turhauttavan, sillä pelaaja ei välttämättä pysty valitsemaan sellaista kulmaa tai voimaa kuin haluaisi.
+            </p>
+            <div class="image-container justify-start vertical-images">
+                <a href="images/launch-a-sloth-01.jpg" data-lightbox="AlbumFI" data-title="Päävalikko" data-alt="Kuvakaappaus pelin päävalikosta, kuvassa ikonilla merkityt painikkeet toiminnoille 'pelaa', 'asetukset', 'info' sekä 'lopeta'."><img src="images/launch-a-sloth-01-thumbnail.jpg" class="pic-thumbnail" alt="Kuvakaappaus pelin päävalikosta, kuvassa ikonilla merkityt painikkeet toiminnoille 'pelaa', 'asetukset', 'info' sekä 'lopeta'." /></a>
+                <a href="images/launch-a-sloth-02.jpg" data-lightbox="AlbumFI" data-title="Tasonvalintaruutu. Jokaisen tason kohdalla on 1-3 tähteä luokituksena pelaajan parhaasta suorituksesta tasolla. Lisäksi jokaisen tason kohdalla on pieni numero, joka kertoo pienimmän kimpoilumäärän, jolla pelaaja on läpäissyt tason." data-alt="Kuvakaappaus tasonvalintaruudusta. Kuvassa näkyvät kaikki 11 tasoa sekä jokaisen alla 1-3 tähteä ja jokaisen vieressä pieni numero, joka kertoo pienimmän kimpoilumäärän, jolla pelaaja on läpäissyt tason."><img src="images/launch-a-sloth-02-thumbnail.jpg" class="pic-thumbnail" alt="Kuvakaappaus tasonvalintaruudusta. Kuvassa näkyvät kaikki 11 tasoa sekä jokaisen alla 1-3 tähteä ja jokaisen vieressä pieni numero, joka kertoo pienimmän kimpoilumäärän, jolla pelaaja on läpäissyt tason." /></a>
+                <a href="images/launch-a-sloth-03.jpg" data-lightbox="AlbumFI" data-title="Pelaaja tähtää tason 2 keräilykohdelehteä" data-alt="Kuvakaappaus tasosta 2. Kuvassa Thud, tykki, keräilykohdelehti, tason maalina toimiva tähti ja visualisointi lentoradasta, jonka nykyinen kulma ja voima saisivat aikaan."><img src="images/launch-a-sloth-03-thumbnail.jpg" class="pic-thumbnail" alt="Kuvakaappaus tasosta 2. Kuvassa Thud, tykki, keräilykohdelehti, tason maalina toimiva tähti ja visualisointi lentoradasta, jonka nykyinen kulma ja voima saisivat aikaan." /></a>
+                <a href="images/launch-a-sloth-04.jpg" data-lightbox="AlbumFI" data-title="Pelaaja on laukaissut tykin" data-alt="Kuvakaappaus tasosta 2, kuvassa Thud lentää ilmassa pelaajan laukaistua tykin edellisessä kuvakaappauksessa nähdyillä asetuksilla."><img src="images/launch-a-sloth-04-thumbnail.jpg" class="pic-thumbnail" alt="Kuvakaappaus tasosta 2, kuvassa Thud lentää ilmassa pelaajan laukaistua tykin edellisessä kuvakaappauksessa nähdyillä asetuksilla." /></a>
+                <a href="images/launch-a-sloth-05.jpg" data-lightbox="AlbumFI" data-title="Voittoruutu, pelaaja sai kolme tähteä: 1) suoritti tason, 2) keräsi lehden ja 3) käytti vähemmän kuin 50% käytettävissä olleista kimpoiluista" data-alt="Kuvakaappaus tason 2 voittoruudusta pelaajan voitettua tason laukaisemalla tykin kaksi kuvaa sitten esitetyillä asetuksilla."><img src="images/launch-a-sloth-05-thumbnail.jpg" class="pic-thumbnail" alt="Kuvakaappaus tason 2 voittoruudusta pelaajan voitettua tason laukaisemalla tykin kaksi kuvaa sitten esitetyillä asetuksilla." /></a>
+                <a href="images/launch-a-sloth-06.jpg" data-lightbox="AlbumFI" data-title="Taso 5 on ensimmäinen syksyteemainen taso" data-alt="Kuvakaappaus tasosta 5, kuvassa syksyinen tausta."><img src="images/launch-a-sloth-06-thumbnail.jpg" class="pic-thumbnail" alt="Kuvakaappaus tasosta 5, kuvassa syksyinen tausta." /></a>
+                <a href="images/launch-a-sloth-07.jpg" data-lightbox="AlbumFI" data-title="Taso 9 on ensimmäinen talviteemainen taso" data-alt="Kuvakaappaus tasosta 9, kuvassa talvinen tausta."><img src="images/launch-a-sloth-07-thumbnail.jpg" class="pic-thumbnail" alt="Kuvakaappaus tasosta 9, kuvassa talvinen tausta." /></a>
+            </div>
+        </div>
+        <div class="section first lang-en">
+            <div class="picture-container right">
+                <a href="images/launch-a-sloth-03.jpg" title="Click to view the full size picture"><img src="images/launch-a-sloth-03-thumbnail.jpg" alt="Screenshot of the second level of Launch-A-Sloth, showing Thud in a cannon while the player is aiming the cannon towards the leaf collectable." /></a>
+                <p>
+                    Screenshot of Launch-A-Sloth.
+                </p>
+            </div>
+            <h2>Launch-A-Sloth</h2>
+            <p>
+                School project (TTOW0221 Game Development Project)<br />
+                Group work (5 developers)<br />
+                Game Design, Game Development, Programming<br />
+                Unity<br />
+                2021
+            </p>
+            <p>
+                <a href="https://student.labranet.jamk.fi/~M3069/launch-a-sloth/" title="Play Launch-A-Sloth">Play Launch-A-Sloth (WebGL)*</a>
+                <span class="icon fas fa-external-link-alt fa-smaller"></span><br/>
+                <a href="https://student.labranet.jamk.fi/~M3069/launch-a-sloth/Launch-A-Sloth_28-04-2021.apk" title="Download Launch-A-Sloth (Android .apk)">Download Launch-A-Sloth (Android .apk)</a>
+                <span class="icon fas fa-download fa-smaller"></span>
+            </p>
+            <p class="small-note">
+                *Dynamic music switch feature of the game isn't available in the WebGL build. The reason for this is that Unity's audio system is more limited on the WebGL platform than other supported platforms. More information: <a href="https://docs.unity3d.com/Manual/webgl-audio.html">Unity Manual: Using Audio in WebGL</a>.
+            </p>
+            <p>
+                Launch-A-Sloth is a game made for the TTOW0221 Game Development Project course of JAMK's Game Development Module. It is a 2D physics puzzle game where the player has to use a cannon to launch a sloth called Thud upwards so he can eventually reach his home at the top of the mountain, from where he fell. The game has 11 levels.
+            </p>
+            <h3>Game mechanics</h3>
+            <p>
+                The player has to bounce Thud around the walls of the levels in order to reach the level goal. There's only a limited amount of bounces available for each level, and if Thud doesn't reach the goal before running out of bounces, the player will have to try again with a different launch configuration.
+            </p>
+            <p>
+                In each level, there's 2 objects the player can collect. The star is the level goal, which the player has to reach in order to progress to the next level. The leaf is an optional challenge item the player can collect to get a better rating on the level.
+            </p>
+            <p>
+                When the player reaches the goal they will be given a 1-3 star rating based on the following factors:
+            </p>
+            <ul>
+                <li>1 star for beating the level</li>
+                <li>+1 star for beating the level with < 50% of the given bounces used</li>
+                <li>+1 star for collecting the leaf</li>
+            </ul>
+            <h3>Advanced features</h3>
+            <p>
+                The game features a dynamic music switch feature which speeds up the background music when the player launches Thud from the cannon. I programmed the feature. The way it works is that there's two versions of each background song: normal and double tempo and the code changes the song on the fly. For making the switch as smooth as possible, there was some mathematics involved, the other song had to be "wound up" to the position corresponding to the song currently playing.
+            </p>
+            <p>
+                In addition to this tempo switch the theme song also switches between different themes based on seasons in different levels. Some of these song variants have different tempos in relation to each other and as the change in tempo is not as simple as in the speed-up / slow-down transition where the relation was 1:2, some more mathematics had to be used to calculate the correct wind-up factor. I ended up programming a conversion matrix that is initialized with the ratios of the diffferent values of tempos of each version of each song in relation to the other songs. The wind-up factor between two songs can then be read from the matrix by using the current song id and the new song id.
+            </p>
+            <h3>My role in the project</h3>
+            <p>
+                My roles in the game development project were game designer, game developer and programmer. I designed the original game idea as the main practical work of the individual work course TTOW0211 Basics of Game Design which was a part of the game development module. My idea was selected from a group of circa 15 game ideas of which three were picked to be worked on in groups of five consisting of the students of the game project course. During the project I was actively taking part in the designing of the game.
+            </p>
+            <p>
+                I was involved in building the game in the Unity game engine in the role of a game developer and programmer. In addition to the dynamic music feature I took it upon myself to take control of the organization of the Unity project. I made game objects into reusable prefabs and built a template scene to base new levels on. I also programmed the stepping in the angle and power adjustment. I wrote a script that visualizes the level specific minimum and maximum angle settings as well as the stepping and starting angle. These tools made it easier to adjust the settings without testing them in-game.
+            </p>
+            <p>
+                Unfortunately, for some of the levels the level specific angle and power stepping settings were left without the required fine tuning in the rush of the finishing stages of the project. This makes the play experience of those levels a little frustrating as the player may not be able to select an angle or power they would want to use.
+            </p>
+            <div class="image-container justify-start vertical-images">
+                <a href="images/launch-a-sloth-01.jpg" data-lightbox="AlbumEN" data-title="Main menu" data-alt="A screenshot of the main menu showing icon buttons for actions 'play', 'settings', 'info' and 'quit'."><img src="images/launch-a-sloth-01-thumbnail.jpg" class="pic-thumbnail" alt="A screenshot of the main menu showing icon buttons for actions 'play', 'settings', 'info' and 'quit'." /></a>
+                <a href="images/launch-a-sloth-02.jpg" data-lightbox="AlbumEN" data-title="Level select screen. Each level shows the 1 to 3 star rating the player has received for the level as well as a small number signifying the lowest number of bounces the player has finished the level with." data-alt="A screenshot of the level select screen, showing signs for all 11 levels each with 1-3 stars below them and a small number beside them that tells the lowest bounce count the player has beaten that level with."><img src="images/launch-a-sloth-02-thumbnail.jpg" class="pic-thumbnail" alt="A screenshot of the level select screen, showing signs for all 11 levels each with 1-3 stars below them and a small number beside them that tells the lowest bounce count the player has beaten that level with." /></a>
+                <a href="images/launch-a-sloth-03.jpg" data-lightbox="AlbumEN" data-title="Player aiming at the leaf collectable on level 2" data-alt="A screenshot of level 2 showing Thud, the cannon, the leaf collectable, level goal star and a visualization of the launch trajectory the current angle and power would result in."><img src="images/launch-a-sloth-03-thumbnail.jpg" class="pic-thumbnail" alt="A screenshot of level 2 showing Thud, the cannon, the leaf collectable, level goal star and a visualization of the launch trajectory the current angle and power would result in." /></a>
+                <a href="images/launch-a-sloth-04.jpg" data-lightbox="AlbumEN" data-title="The player has launched the cannon" data-alt="A screenshot of level 2 showing Thud flying in the air after the player launched the cannon with the settings seen in the previous screenshot."><img src="images/launch-a-sloth-04-thumbnail.jpg" class="pic-thumbnail" alt="A screenshot of level 2 showing Thud flying in the air after the player launched the cannon with the settings seen in the previous screenshot." /></a>
+                <a href="images/launch-a-sloth-05.jpg" data-lightbox="AlbumEN" data-title="Victory screen, the player received 3 stars: level complete, leaf collected, less than 50% of bounces used" data-alt="A screenshot showing the victory screen of the game after the player beat level 2 by launching the cannon with the settings seen two screenshots prior."><img src="images/launch-a-sloth-05-thumbnail.jpg" class="pic-thumbnail" alt="A screenshot showing the victory screen of the game after the player beat level 2 by launching the cannon with the settings seen two screenshots prior." /></a>
+                <a href="images/launch-a-sloth-06.jpg" data-lightbox="AlbumEN" data-title="Level 5 is the first fall themed level" data-alt="A screenshot of level 5, featuring a fall themed background."><img src="images/launch-a-sloth-06-thumbnail.jpg" class="pic-thumbnail" alt="A screenshot of level 5, featuring a fall themed background." /></a>
+                <a href="images/launch-a-sloth-07.jpg" data-lightbox="AlbumEN" data-title="Level 9 is the first winter themed level" data-alt="A screenshot of level 9, featuring a winter themed background."><img src="images/launch-a-sloth-07-thumbnail.jpg" class="pic-thumbnail" alt="A screenshot of level 9, featuring a winter themed background." /></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <address>
+            <em>
+                Email: lehtinen.lassi.c // gmail
+            </em>
+        </address>
+    </footer>
+
+    <script src="../../js/lightbox/lightbox-plus-jquery.min.js"></script>
+    <script>
+        let langSwitch = new LanguageSwitcher();
+
+        // speed up modal open/close animation,
+        // disable image transition animations
+        // and enable wrapping between first and last image
+        lightbox.option({
+
+            fadeDuration: 250,
+            resizeDuration: 0,
+            imageFadeDuration: 0,
+            wrapAround: true
+        });
+    </script>
+</body>
+</html>

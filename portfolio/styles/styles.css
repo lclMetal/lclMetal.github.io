@@ -1,0 +1,536 @@
+/*
+"Outside In" CSS Property ordering by Guy Routledge
+https://webdesign.tutsplus.com/articles/outside-in-ordering-css-properties-by-importance--cms-21685
+
+.selector1,
+.selector2 {
+    === Layout ===
+    position
+    float
+    clear
+    display
+
+    === Box model ===
+    width
+    height
+    margin
+    padding
+
+    === Visual ===
+    color
+    background-color
+    border
+    box-shadow
+
+    === Typography ===
+    font-size
+    font-family
+    text-align
+    text-transform
+}
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: white;
+    font-family: 'Ruda', sans-serif;
+}
+
+h1 {
+    /* Box model */
+    max-height: 352px; /* height of the background image */
+    margin: 0;
+    padding: 10% 0;
+
+    /* Visual */
+    color: #022B3A;
+    background-image: url("../images/kansi.png");
+    background-position: top left;
+    background-size: auto 100%;
+
+    /* Typography */
+    font-size: 3em;
+    font-weight: 400;
+    font-family: 'Bungee', sans-serif;
+    line-height: 1em;
+}
+
+h2,
+h3 {
+    letter-spacing: -0.02em;
+}
+
+footer {
+    margin-top: 2em;
+    padding: 1em 1.5em;
+    color: white;
+    background-color: #022B3A;
+}
+
+
+
+
+
+/* ===== Navigation =====*/
+
+.topnav {
+    width: 100%;
+    padding: 0;
+
+    background-color: #022B3A;
+    color: #D3D3D3;
+
+    text-align: center;
+}
+
+.topnav ul {
+    height: 100%;
+    margin-top: 0;
+    padding: 0 0.7em;
+    text-align: center;
+}
+
+.topnav li {
+    display: inline-block;
+    height: 2.2em;
+    min-width: 25%;
+    max-width: 50%;
+}
+
+.topnav a:link,
+.topnav a:visited {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    color: #D3D3D3;
+
+    line-height: 2.3em;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    color: black;
+    background-color: #5C9EAB;
+}
+
+.topnav a:active {
+    background-color: #70AAB5;
+}
+
+.current-page {
+    background-color: #1F7A8C;
+}
+
+/* ===== Navigation end =====*/
+
+
+
+
+
+/* ===== Layout ===== */
+
+.clear {
+    clear: both;
+}
+
+.white {
+    display: inline-block;
+    margin-top: -1%;
+    padding: 1% 2% 1% 5%;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.display-inline {
+    display: inline;
+}
+
+.small-note {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+a:link,
+a:visited {
+    color: #1F7A8C;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #5C9EAB;
+    text-decoration: underline;
+}
+
+code {
+    font-size: 1.25em;
+}
+
+.language-selection {
+    text-align: right;
+}
+
+.main-content {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 5%;
+    overflow: auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+}
+
+.justify-start {
+    justify-content: flex-start !important;
+}
+
+.card {
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-picture {
+    height: 15em;
+    overflow: hidden;
+}
+
+.card-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card p,
+.card h3 {
+    padding: 0 1rem;
+}
+
+.anim-fix-wrapper .blur {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    transition: backdrop-filter 1s ease;
+    backdrop-filter: blur(0px);
+}
+
+.card-overlay-text {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 30em;
+    transform: translate3d(0, 11.95em, 0);
+    transition: transform 0.5s ease;
+}
+
+.card-overlay-bg {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 30em;
+    transform: translate3d(0, 12.5em, 0);
+    transition: transform 0.5s ease;
+    background: #FFFFFFEE;
+}
+
+@media (hover: hover) {
+    .anim-fix-wrapper:hover .card-overlay-text {
+        transform: translate3d(0, 0.5em, 0);
+        transition: transform 0.7s ease;
+    }
+
+    .anim-fix-wrapper:hover .card-overlay-bg {
+        transform: translate3d(0, -3.2em, 0);
+        transition: transform 0.7s ease;
+    }
+
+    .anim-fix-wrapper:hover .blur {
+        backdrop-filter: blur(6px);
+    }
+
+    .anim-fix-wrapper .card-overlay-text h3 .fas {
+        display: none;
+        margin: 0;
+        margin-right: 0.2em;
+    }
+}
+
+
+@media (hover: none) {
+    .anim-fix-wrapper .card-overlay-text h3 .pseudo-link-text {
+        color: #1F7A8C;
+    }
+
+    .anim-fix-wrapper .card-overlay-text h3 .fas {
+        margin: 0;
+        margin-right: 0.2em;
+    }
+}
+
+.card a:focus div[class*="overlay"] h3 .pseudo-link-text {
+    position: relative;
+    left: -0.2em;
+    padding: 0 0.2em;
+    outline: #5C9EAB dashed 2px;
+}
+
+.card-overlay-text:hover p .pseudo-link-text {
+    text-decoration: underline;
+}
+
+.black {
+    color: black;
+}
+
+/*
+    The hover events of the wrapper are used to move the card.
+    This fixes the issue where moving the card by hovering it
+    would repeatedly end and reactivate the hover state, causing
+    the animation to flicker rapidly.
+*/
+.flex-container > .anim-fix-wrapper {
+    flex-grow: 1;
+    /* width: 45%; */
+    flex-basis: 45%;
+    min-width: 13em;
+    margin: 0.5em;
+    padding: 0;
+    padding-right: 1px;
+}
+
+.justify-start > .anim-fix-wrapper {
+    flex-grow: 0;
+}
+
+.flex-container > .anim-fix-wrapper > article.card {
+    transform: translate3d(0px, 0px, 0px);
+    background-color: #70AAB533;
+    box-shadow: #70AAB5 0px 0px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* background: linear-gradient(to top left, #70AAB555, transparent); */
+}
+
+@media (hover: hover) {
+    .flex-container > .anim-fix-wrapper:hover > article.card {
+        transform: translate3d(-5px, -5px, 0px);
+        box-shadow: #70AAB5 5px 5px 2px;
+    }
+}
+
+.section {
+    clear: both;
+    margin: 2.5em 0;
+    overflow: auto;
+}
+
+.first {
+    margin: 0;
+}
+
+.narrow {
+    max-width: 75%;
+}
+
+.divider {
+    padding-top: 2.5em;
+    border-top: 2px groove #EEEEEE;
+}
+
+.left {
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 1em;
+}
+
+.right {
+    float: right;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.picture {
+    display: block;
+    max-width: 15em;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.carved {
+    margin: 0.5em 0.5em 1em;
+    border: 2px solid lightgray;
+    box-shadow: 2px -4px gray, -2px -4px gray;
+}
+
+.picture-container {
+    max-width: 40%;
+    text-align: center;
+}
+
+.picture-container img {
+    max-width: 90%;
+}
+
+.picture-container p {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.pic-thumbnail {
+    width: auto;
+    height: 7.25em;
+    box-shadow: #70aab5 0px 0px 2px;
+}
+
+.vertical-images .pic-thumbnail {
+    width: auto;
+    height: 14.5em;
+    box-shadow: #70aab5 0px 0px 2px;
+}
+
+.icon {
+    width: 1em;
+    margin: 0 0.2em;
+    font-size: 2em;
+}
+
+.big {
+    line-height: 2em;
+    vertical-align: bottom;
+}
+
+.slim {
+    margin-top: 0.2em;
+    margin-bottom: 0;
+}
+
+.yt-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+}
+
+.yt-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-container a {
+    display: block;
+    margin: 0.5em;
+}
+
+.fa-arrow-right,
+.fa-arrow-left {
+    margin: auto 0.5em;
+}
+
+.fa-smaller {
+    font-size: 1.2em;
+}
+
+/* ===== Layout end ===== */
+
+
+
+
+
+/* ===== Responsive layout ===== */
+
+@media all and (max-width: 850px) {
+    .topnav {
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+    }
+
+    .main-content {
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: auto;
+    }
+
+    .main-content h2 {
+        text-align: center;
+    }
+
+    .section,
+    p + .section {
+        margin: 2em 0;
+    }
+
+    .flex-container > article.card {
+        margin: 0.5em 0;
+    }
+
+    .justify-start > .anim-fix-wrapper {
+        flex-grow: 1;
+        flex-basis: 100%;
+    }
+
+    .narrow {
+        max-width: 100%;
+    }
+
+    .left,
+    .right {
+        float: none;
+    }
+
+    .picture {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .picture-container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .carved {
+        margin: 0.5em auto 1em;
+    }
+}
+
+/* ===== Responsive layout end ===== */
+
+
+
+
+
+/* ===== Reduced motion media query ===== */
+@media (prefers-reduced-motion) {
+    .flex-container > .anim-fix-wrapper > article.card {
+        transition: none;
+    }
+
+    .flex-container > .anim-fix-wrapper:hover > article.card {
+        transform: translate3d(0px, 0px, 0px);
+        box-shadow: none;
+    }
+
+    .card-overlay-text {
+        transition: none;
+    }
+}
