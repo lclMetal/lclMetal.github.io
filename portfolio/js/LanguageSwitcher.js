@@ -1,31 +1,49 @@
 class LanguageSwitcher {
     constructor(lang) {
-        this.supportedLanguages = ["fi", "en", "sve", "den"];
+        this.supportedLanguages = ["fi", "en"];
+        this.supportedLanguageTitles = { "fi": "Suomeksi", "en": "In English" };
         if (localStorage.getItem("lang") === null) {
-            this.setLanguage(this.supportedLanguages[0]); // default to fi
+            this.setLanguage(this.supportedLanguages[1]); // default to en
         } else {
             this.setLanguage(this.getLanguage());
+        }
+
+        const languageSelectorDiv = document.querySelector(".language-selection");
+        if (languageSelectorDiv !== undefined) {
+            const langSwitcher = this;
+            for (lang of this.supportedLanguages) {
+                console.log(lang);
+                const langButton = document.createElement("button");
+                langButton.type = "button";
+                langButton.addEventListener("click", this.setLanguage.bind(this, lang));
+                langButton.textContent = this.supportedLanguageTitles[lang];
+                languageSelectorDiv.appendChild(langButton);
+                languageSelectorDiv.appendChild(document.createTextNode(" "));
+            }
         }
     }
 
     setLanguage(lang) {
+        const hideClass = "hidden";
+
         if (this.supportedLanguages.includes(lang)) {
             localStorage.setItem("lang", lang);
         }
 
-        let showLang = "lang-" + lang;
-        let showElems = document.getElementsByClassName(showLang);
-        Array.prototype.forEach.call(showElems, elem => elem.style.display = "inherit");
+        const showLang = "lang-" + lang;
+        const langElems = document.querySelectorAll("." + showLang);
 
-        // if (event) {
-            // event.target.style.fontSize = "3em";
-        // }
+        langElems.forEach((elem) => {
+            elem.classList.remove(hideClass);
+        });
 
-        let hideLangs = this.supportedLanguages.filter(language => language !== lang);
-        hideLangs.forEach(language => Array.prototype.forEach.call(
-            document.getElementsByClassName("lang-" + language), elem => elem.style.display = "none"
-        ));
-
+        const hideLangs = this.supportedLanguages.filter(language => language !== lang);
+        hideLangs.forEach((language) => {
+            const langElems = document.querySelectorAll(".lang-" + language);
+            langElems.forEach((elem) => {
+                elem.classList.add(hideClass);
+            });
+        });
     }
 
     getLanguage() {

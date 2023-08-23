@@ -24,17 +24,14 @@
         <ul>
             <!--    The whitespace between the li elements has been commented out to
                     prevent an unsightly gap from appearing between the navigation items.   -->
-            <li><a href="../"><span class="lang-fi">Etusivu</span><span class="lang-en">Main</span></a></li><!--
+            <li><a href="../"><span class="lang-fi hidden">Etusivu</span><span class="lang-en">Main</span></a></li><!--
             --><li class="current-page"><a href="./">Portfolio</a></li>
         </ul>
     </nav>
 
     <div class="main-content">
-        <div class="language-selection">
-            <button type="button" onClick="langSwitch.setLanguage('fi')">Suomeksi</button>
-            <button type="button" onClick="langSwitch.setLanguage('en')">In English</button>
-        </div>
-        <div class="section first lang-fi">
+        <div class="language-selection"></div>
+        <div class="section first lang-fi hidden">
             <img src="images/profiilikuva.png" alt="LCL-profiilikuva" class="picture left round"/>
             <h2>Ohjelmointi</h2>
             <p>Näytteitä ohjelmointiprojekteistani.</p>
@@ -99,7 +96,7 @@
             </div>
         </div>
 
-        <div class="section divider lang-fi">
+        <div class="section divider lang-fi hidden">
             <img src="images/profiilikuva.png" alt="LCL-profiilikuva" class="picture left round"/>
             <h2>Pelit</h2>
             <p>Näytteitä peliprojekteistani.</p>
@@ -223,7 +220,7 @@
             </div>
         </div>
 
-        <div class="section divider lang-fi">
+        <div class="section divider lang-fi hidden">
             <img src="images/web.png" alt="Kuva toteuttamastani WWW-sivusta" class="picture right round"/>
             <h2>WWW-sivut</h2>
             <p>Näytteitä tekemistäni WWW-sivuista.</p>
@@ -254,7 +251,7 @@
             </p>
         </div>
 
-        <div class="section divider lang-fi">
+        <div class="section divider lang-fi hidden">
             <img src="images/banecat.jpg" alt="Inkscapella tekemäni kuva kuvitteellisen viskipullon etiketistä" class="picture left round"/>
             <h2>Grafiikka</h2>
             <p>

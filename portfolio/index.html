@@ -22,34 +22,31 @@
         <ul>
             <!--    The whitespace between the li elements has been commented out to
                     prevent an unsightly gap from appearing between the navigation items.   -->
-            <li class="current-page"><a href="./"><span class="lang-fi">Etusivu</span><span class="lang-en">Main</span></a></li><!--
+            <li class="current-page"><a href="./"><span class="lang-fi hidden">Etusivu</span><span class="lang-en">Main</span></a></li><!--
             --><li><a href="portfolio/">Portfolio</a></li>
         </ul>
     </nav>
 
     <div class="main-content">
-        <div class="language-selection">
-            <button type="button" onClick="langSwitch.setLanguage('fi')">Suomeksi</button>
-            <button type="button" onClick="langSwitch.setLanguage('en')">In English</button>
-        </div>
+        <div class="language-selection"></div>
         <div class="section first narrow">
-            <div class="lang-fi">
+            <div class="lang-fi hidden">
             <a href="images/lassi_lehtinen_1000x1000.jpg" title="Klikkaa nähdäksesi täysikokoisen kuvan"><img src="images/lassi_lehtinen_500x500.jpg" alt="Lassi Lehtisen muotokuva" class="picture right round carved"/></a>
             </div>
             <div class="lang-en">
             <a href="images/lassi_lehtinen_1000x1000.jpg" title="Click to see the full size picture"><img src="images/lassi_lehtinen_500x500.jpg" alt="Portrait of Lassi Lehtinen" class="picture right round carved"/></a>
             </div>
-            <h2 class="lang-fi">Tuleva ohjelmoinnin ammattilainen</h2>
+            <h2 class="lang-fi hidden">Tuleva ohjelmoinnin ammattilainen</h2>
             <h2 class="lang-en">Future professional programmer</h2>
             <p>
                 <strong>Lassi Lehtinen</strong><br />
-                <span class="showAge"></span> <span class="display-inline"><span class="lang-fi">vuotta</span><span class="lang-en">years</span></span><br />
+                <span class="showAge"></span> <span class="display-inline"><span class="lang-fi hidden">vuotta</span><span class="lang-en">years</span></span><br />
                 Jyväskylä
             </p>
-            <p class="lang-fi">JAMK / Tieto- ja viestintätekniikka / Ohjelmistotekniikka</p>
+            <p class="lang-fi hidden">JAMK / Tieto- ja viestintätekniikka / Ohjelmistotekniikka</p>
             <p class="lang-en">JAMK / Information and communication technology / Software engineering</p>
         </div>
-        <div class="section lang-fi">
+        <div class="section lang-fi hidden">
             <p><b>Hei,</b></p>
             <p>
                 olen Lassi Lehtinen, <span class="showAge"></span>-vuotias tieto- ja viestintätekniikan opiskelija Jyväskylästä.
