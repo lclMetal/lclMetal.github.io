@@ -15,14 +15,14 @@
 </head>
 <body>
     <header>
-        <h1><span class="white">Lassi<br />Lehtinen</span></h1>
+        <p id="big-title"><span class="white">Lassi<br />Lehtinen</span></p>
     </header>
 
     <nav class="topnav">
         <ul>
             <!--    The whitespace between the li elements has been commented out to
                     prevent an unsightly gap from appearing between the navigation items.   -->
-            <li class="current-page"><a href="./"><span class="lang-fi hidden">Etusivu</span><span class="lang-en">Main</span></a></li><!--
+            <li class="current-page"><span class="lang-fi hidden"><span class="nav-item">Etusivu</span></span><span class="lang-en"><span class="nav-item">Main</span></span></li><!--
             --><li><a href="portfolio/">Portfolio</a></li>
         </ul>
     </nav>
@@ -30,17 +30,16 @@
     <div class="main-content">
         <div class="language-selection"></div>
         <div class="section first narrow">
+            <h1><span class="lang-fi">Ohjelmoija</span><span class="lang-en">Software developer</span></h1>
             <div class="lang-fi hidden">
             <a href="images/lassi_lehtinen_1000x1000.jpg" title="Klikkaa nähdäksesi täysikokoisen kuvan"><img src="images/lassi_lehtinen_500x500.jpg" alt="Lassi Lehtisen muotokuva" class="picture right round carved"/></a>
             </div>
             <div class="lang-en">
             <a href="images/lassi_lehtinen_1000x1000.jpg" title="Click to see the full size picture"><img src="images/lassi_lehtinen_500x500.jpg" alt="Portrait of Lassi Lehtinen" class="picture right round carved"/></a>
             </div>
-            <h2 class="lang-fi hidden">Tuleva ohjelmoinnin ammattilainen</h2>
-            <h2 class="lang-en">Future professional programmer</h2>
             <p>
                 <strong>Lassi Lehtinen</strong><br />
-                <span class="showAge"></span> <span class="display-inline"><span class="lang-fi hidden">vuotta</span><span class="lang-en">years</span></span><br />
+                <span class="js-required hidden"><span class="showAge"></span> <span class="display-inline"><span class="lang-fi hidden">vuotta</span><span class="lang-en">years</span></span><br /><span>
                 Jyväskylä
             </p>
             <p class="lang-fi hidden">JAMK / Tieto- ja viestintätekniikka / Ohjelmistotekniikka</p>
@@ -49,7 +48,7 @@
         <div class="section lang-fi hidden">
             <p><b>Hei,</b></p>
             <p>
-                olen Lassi Lehtinen, <span class="showAge"></span>-vuotias tieto- ja viestintätekniikan opiskelija Jyväskylästä.
+                olen Lassi Lehtinen, <span class="js-required hidden"><span class="showAge"></span>-vuotias</span> tieto- ja viestintätekniikan opiskelija Jyväskylästä.
                 Suuntautumisekseni olen valinnut ohjelmistotekniikan.
             </p>
             <p>
@@ -73,7 +72,7 @@
         <div class="section lang-en">
             <p><b>Hello,</b></p>
             <p>
-                I'm Lassi Lehtinen, a <span class="showAge"></span>-year-old ICT student from Jyväskylä, Finland.
+                I'm Lassi Lehtinen, a <span class="js-required hidden"><span class="showAge"></span>-year-old</span> ICT student from Jyväskylä, Finland.
                 I've specialised in software engineering.
             </p>
             <p>
@@ -119,6 +118,13 @@
 
         let insertAgeElements = document.getElementsByClassName("showAge");
         Array.prototype.forEach.call(insertAgeElements, elem => elem.textContent = age);
+
+        const hideClass = "hidden";
+        const jsRequiredElems = document.querySelectorAll(".js-required");
+
+        jsRequiredElems.forEach((elem) => {
+            elem.classList.remove(hideClass);
+        });
     </script>
 </body>
 </html>

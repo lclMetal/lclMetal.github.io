@@ -41,7 +41,7 @@ body {
     font-family: 'Ruda', sans-serif;
 }
 
-h1 {
+#big-title {
     /* Box model */
     max-height: 352px; /* height of the background image */
     margin: 0;
@@ -58,6 +58,14 @@ h1 {
     font-weight: 400;
     font-family: 'Bungee', sans-serif;
     line-height: 1em;
+}
+
+h1 {
+    font-family: 'Bungee', sans-serif;
+    font-size: 2.5em;
+    /* margin: 0; */
+    line-height: 1em;
+    margin-bottom: 0.5em;
 }
 
 h2,
@@ -83,7 +91,6 @@ footer {
     padding: 0;
 
     background-color: #022B3A;
-    color: #D3D3D3;
 
     text-align: center;
 }
@@ -103,7 +110,8 @@ footer {
 }
 
 .topnav a:link,
-.topnav a:visited {
+.topnav a:visited,
+.topnav .nav-item {
     display: block;
 
     width: 100%;
@@ -111,7 +119,7 @@ footer {
     padding-left: 0.5em;
     padding-right: 0.5em;
 
-    color: #D3D3D3;
+    color: white; /* color: #D3D3D3; */
 
     line-height: 2.3em;
     text-decoration: none;
@@ -340,6 +348,11 @@ code {
     overflow: auto;
 }
 
+.section-no-clear {
+    margin: 2.5em 0;
+    overflow: auto;
+}
+
 .first {
     margin: 0;
 }
@@ -351,6 +364,10 @@ code {
 .divider {
     padding-top: 2.5em;
     border-top: 2px groove #EEEEEE;
+}
+
+.center {
+    text-align: center;
 }
 
 .left {
@@ -468,6 +485,10 @@ code {
         position: sticky;
         top: 0px;
         z-index: 1;
+    }
+
+    h1 {
+        text-align: center;
     }
 
     .main-content {
