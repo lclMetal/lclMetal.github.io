@@ -546,6 +546,7 @@ code {
 
 
 /* ===== Reduced motion media query ===== */
+
 @media (prefers-reduced-motion) {
     .flex-container > .anim-fix-wrapper > article.card {
         transition: none;
@@ -562,23 +563,3 @@ code {
 }
 
 /* ===== Reduced motion media query end ===== */
-
-
-
-
-
-/* ===== No-script media query ===== */
-@media (scripting) {
-    .flex-container > .anim-fix-wrapper > article.card {
-        transition: none;
-    }
-
-    .flex-container > .anim-fix-wrapper:hover > article.card {
-        transform: translate3d(0px, 0px, 0px);
-        box-shadow: none;
-    }
-
-    .card-overlay-text {
-        transition: none;
-    }
-}
