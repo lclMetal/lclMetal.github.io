@@ -1,11 +1,15 @@
 class LanguageSwitcher {
     constructor(lang) {
+        this.currentLanguage = null;
+        this.pageTitles = null;
         this.supportedLanguages = ["fi", "en"];
         this.supportedLanguageTitles = { "fi": "Suomeksi", "en": "In English" };
         if (localStorage.getItem("lang") === null) {
             this.setLanguage(this.supportedLanguages[1]); // default to en
+            this.currentLanguage = this.supportedLanguages[1];
         } else {
             this.setLanguage(this.getLanguage());
+            this.currentLanguage = this.getLanguage();
         }
 
         const languageSelectorDiv = document.querySelector(".language-selection");
@@ -23,11 +27,19 @@ class LanguageSwitcher {
         }
     }
 
+    setPageTitles(titles) {
+        this.pageTitles = titles;
+        if (this.currentLanguage) {
+            document.title = this.pageTitles[this.currentLanguage];
+        }
+    }
+
     setLanguage(lang) {
         const hideClass = "hidden";
 
         if (this.supportedLanguages.includes(lang)) {
             localStorage.setItem("lang", lang);
+            this.currentLanguage = lang;
         }
 
         const showLang = "lang-" + lang;
@@ -44,6 +56,10 @@ class LanguageSwitcher {
                 elem.classList.add(hideClass);
             });
         });
+
+        if (this.pageTitles) {
+            this.setPageTitles(this.pageTitles);
+        }
     }
 
     getLanguage() {
