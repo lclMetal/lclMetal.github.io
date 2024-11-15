@@ -155,6 +155,11 @@ footer {
     /* height: 0; */
 }
 
+
+.va-sub {
+    vertical-align: sub;
+}
+
 .white {
     display: inline-block;
     margin-top: -1%;
@@ -186,6 +191,17 @@ a:active {
 
 code {
     font-size: 1.25em;
+}
+
+.add-language-icon-c::after {
+    content: "";
+    display: block;
+    background: no-repeat url(../images/C_Programming_Language.svg);
+    background-size: 1.2em 1.2em;
+    width: 1.2em;
+    height: 1.2em;
+    float: left;
+    margin-right: 0.5em;
 }
 
 .language-selection {
