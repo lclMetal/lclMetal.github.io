@@ -38,6 +38,8 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     background-color: white;
+    background: center fixed url("../images/background.jpg") no-repeat;
+    background-size: cover;
     font-family: 'Ruda', sans-serif;
 }
 
@@ -49,7 +51,6 @@ body {
 
     /* Visual */
     color: #022B3A;
-    background-image: url("../images/kansi.png");
     background-position: top left;
     background-size: auto 100%;
 
