@@ -2,14 +2,29 @@ class LanguageSwitcher {
     constructor(lang) {
         this.currentLanguage = null;
         this.pageTitles = null;
+
         this.supportedLanguages = ["fi", "en"];
         this.supportedLanguageTitles = { "fi": "Suomeksi", "en": "In English" };
-        if (localStorage.getItem("lang") === null) {
-            this.setLanguage(this.supportedLanguages[1]); // default to en
-            this.currentLanguage = this.supportedLanguages[1];
+        this.supportedLanguageFlags  = { "fi": "fi-fi",    "en": "fi-gb"      };
+        this.defaultLanguage = this.supportedLanguages[1];
+
+        if (document.location.search !== "") {
+            let params = new URLSearchParams(document.location.search);
+
+            let lang = params.get("lang");
+
+            if (this.supportedLanguages.includes(lang)) {
+                this.setLanguage(lang);
+                this.currentLanguage = this.getLanguage();
+            } else {
+                console.log("Invalid language: " + lang);
+                this.setLanguage(this.defaultLanguage);
+                this.currentLanguage = this.defaultLanguage;
+            }
+        } else if (localStorage.getItem("lang") === null) {
+            this.switchLanguage(this.defaultLanguage);
         } else {
-            this.setLanguage(this.getLanguage());
-            this.currentLanguage = this.getLanguage();
+            this.switchLanguage(this.getLanguage());
         }
 
         const languageSelectorDiv = document.querySelector(".language-selection");
@@ -18,9 +33,15 @@ class LanguageSwitcher {
             for (lang of this.supportedLanguages) {
                 console.log(lang);
                 const langButton = document.createElement("button");
+                const langFlag = document.createElement("span");
+                const langText = document.createTextNode(" " + this.supportedLanguageTitles[lang]);
+
+                langFlag.classList.add("fi", this.supportedLanguageFlags[lang]);
+
                 langButton.type = "button";
-                langButton.addEventListener("click", this.setLanguage.bind(this, lang));
-                langButton.textContent = this.supportedLanguageTitles[lang];
+                langButton.addEventListener("click", this.switchLanguage.bind(this, lang));
+                langButton.appendChild(langFlag);
+                langButton.appendChild(langText);
                 languageSelectorDiv.appendChild(langButton);
                 languageSelectorDiv.appendChild(document.createTextNode(" "));
             }
@@ -32,6 +53,10 @@ class LanguageSwitcher {
         if (this.currentLanguage) {
             document.title = this.pageTitles[this.currentLanguage];
         }
+    }
+
+    switchLanguage(lang) {
+        document.location.replace(document.location.pathname + "?lang=" + lang);
     }
 
     setLanguage(lang) {
