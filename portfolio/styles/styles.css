@@ -30,7 +30,7 @@ https://webdesign.tutsplus.com/articles/outside-in-ordering-css-properties-by-im
 }
 */
 
-/* COLORS:
+/* COLORS (picked from bg image with canva):
     #152935
     #2c5066
     #637d84
@@ -38,19 +38,31 @@ https://webdesign.tutsplus.com/articles/outside-in-ordering-css-properties-by-im
     #f3ecdc
 */
 
+/* Not very descriptive names, BUT named with the idea that:
+    0 is the darkest and
+    4 is the brightest.
+*/
+:root {
+    --color-0: #152935;
+    --color-1: #2c5066;
+    --color-2: #637d84;
+    --color-3: #b0ad9a;
+    --color-4: #f3ecdc;
+}
+
 * {
     box-sizing: border-box;
 }
 
 html {
-    background: #152935 center fixed url("../images/background.jpg") no-repeat;
+    background: var(--color-0) center fixed url("../images/background.jpg") no-repeat;
     background-size: cover;
 }
 
 body {
     max-width: 1280px;
     margin: 0 auto;
-    color: #f3ecdc;
+    color: var(--color-4);
     font-family: 'Ruda', sans-serif;
 }
 
@@ -60,7 +72,7 @@ body {
     /* margin: 1em auto; */
 
     /* Visual */
-    color: #152935;
+    color: var(--color-0);
 
     /* Typography */
     font-size: 3em;
@@ -88,8 +100,8 @@ h1 {
 
     text-align: center;
 
-    color: #152935;
-    background: linear-gradient(90deg, transparent, #f3ecdc 40%, transparent);
+    color: var(--color-0);
+    background: linear-gradient(90deg, transparent, var(--color-4) 40%, transparent);
 }
 
 h2,
@@ -187,7 +199,7 @@ footer {
 }
 
 .white {
-    filter: drop-shadow(#f3ecdc 0 0 0.1em);
+    filter: drop-shadow(var(--color-4) 0 0 0.1em);
 
     /* new: */
     background-color: #2C5066;
@@ -405,17 +417,20 @@ code {
     padding: 1em;
     overflow: auto;
 
-    /* color: #152935; */
+    /* color: var(--color-0); */
     /* background-color: #f3ecdc44; */
     /* background-color: #152935cc; */
     /* box-shadow: #152935cc 0em 0em 2em 2em; */
 
-    /* color: #f3ecdc; */
+    /* color: var(--color-4); */
     /* background-color: #2c506666; */
     /* box-shadow: #2c506666 0em 0em 2em 2em; */
 
-    color: #152935;
-    background-color: #f3ecdccc;
+    color: var(--color-0);
+    /* background-color: #f3ecdccc; */
+    /* background-color: #f3ecdce0; */
+    background-color: #f3ecdce0;
+    backdrop-filter: blur(12px);
     /* box-shadow: #f3ecdccc 0em 0em 0.5em 2em; */
     padding: 2em;
     margin: 4em 0;
