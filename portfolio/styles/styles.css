@@ -102,7 +102,22 @@ h1 {
 
     color: var(--color-0);
     background: linear-gradient(90deg, transparent, var(--color-4) 40%, transparent);
+
+    /* margin: 2em 0em; */
+    margin: 1.5em 0;
+    background-color: #f3ecdce0;
+    backdrop-filter: blur(12px);
+    border-radius: 2rem;
+    padding: 0.3em;
 }
+
+/* h1:before { */
+    /* content: ": : "; */
+/* } */
+
+/* h1:after { */
+    /* content: " : :"; */
+/* } */
 
 h2,
 h3 {
@@ -202,7 +217,7 @@ footer {
     filter: drop-shadow(var(--color-4) 0 0 0.1em);
 
     /* new: */
-    background-color: #2C5066;
+    background-color: var(--color-1);
     color: #F3ECDC;
     padding: 1em;
 }
@@ -281,6 +296,23 @@ code {
 
 .justify-start {
     justify-content: flex-start !important;
+}
+
+.back-button {
+    border-radius: 1rem;
+    background-color: var(--color-4);
+    width: fit-content;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.back-button a {
+    display: inline-block;
+    padding: 1em;
+}
+
+.back-button a span {
+    color: var(--color-0);
 }
 
 .card {
@@ -421,7 +453,7 @@ code {
 .section {
     clear: both;
     /* margin: 10em 0; */
-    margin: 8em 0;
+    /* margin: 8em 0; */
     padding: 1em;
     overflow: auto;
 
@@ -466,7 +498,7 @@ code {
 }
 
 .first {
-    margin: 4em 0;
+    /* margin: 4em 0; */
 }
 
 .narrow {
@@ -598,6 +630,14 @@ code {
         z-index: 1;
         margin-right: 3em;
     }
+
+    h1:before {
+        content: "";
+    }
+
+    h1:after {
+        content: "";
+    }
 }
 
 @media all and (max-width: 850px) {
@@ -621,6 +661,15 @@ code {
 
     h1 {
         text-align: center;
+        font-size: 1.5em;
+    }
+
+    .section {
+        margin: 2em 0;
+    }
+
+    .section h2 {
+        font-size: 1.5em;
     }
 
     .main-content {
@@ -632,11 +681,6 @@ code {
     .main-content h2 {
         text-align: center;
         margin-top: 0.5em;
-    }
-
-    .section,
-    p + .section {
-        margin: 7em 0;
     }
 
     .flex-container > article.card {
