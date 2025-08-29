@@ -4,7 +4,8 @@ class LanguageSwitcher {
         this.pageTitles = null;
 
         this.supportedLanguages = ["fi", "en"];
-        this.supportedLanguageTitles = { "fi": "Suomeksi", "en": "In English" };
+        this.supportedLanguageLabels = { "fi": "FI", "en": "EN" };
+        this.supportedLanguageTooltips = { "fi": "Vaihda kieleksi suomi", "en": "Change language to English" };
         this.supportedLanguageFlags  = { "fi": "fi-fi",    "en": "fi-gb"      };
         this.defaultLanguage = this.supportedLanguages[1];
 
@@ -32,18 +33,21 @@ class LanguageSwitcher {
             const langSwitcher = this;
             for (lang of this.supportedLanguages) {
                 console.log(lang);
-                const langButton = document.createElement("button");
-                const langFlag = document.createElement("span");
-                const langText = document.createTextNode(" " + this.supportedLanguageTitles[lang]);
+                if (lang !== this.currentLanguage) {
+                    const langButton = document.createElement("button");
+                    const langFlag = document.createElement("span");
+                    const langText = document.createTextNode(" " + this.supportedLanguageLabels[lang]);
 
-                langFlag.classList.add("fi", this.supportedLanguageFlags[lang]);
+                    langFlag.classList.add("fi", this.supportedLanguageFlags[lang]);
 
-                langButton.type = "button";
-                langButton.addEventListener("click", this.switchLanguage.bind(this, lang));
-                langButton.appendChild(langFlag);
-                langButton.appendChild(langText);
-                languageSelectorDiv.appendChild(langButton);
-                languageSelectorDiv.appendChild(document.createTextNode(" "));
+                    langButton.type = "button";
+                    langButton.title = this.supportedLanguageTooltips[lang];
+                    langButton.addEventListener("click", this.switchLanguage.bind(this, lang));
+                    langButton.appendChild(langFlag);
+                    langButton.appendChild(langText);
+                    languageSelectorDiv.appendChild(langButton);
+                    languageSelectorDiv.appendChild(document.createTextNode(" "));
+                }
             }
         }
     }

@@ -207,6 +207,14 @@ footer {
     padding: 1em;
 }
 
+span.white:before {
+    content: "\{ ";
+}
+
+span.white:after {
+    content: " \}";
+}
+
 .display-inline {
     display: inline;
 }
@@ -244,9 +252,9 @@ code {
 }
 
 .language-selection {
-    /* text-align: right; */
     float: right;
     line-height: 3em;
+    margin-right: 5em;
 }
 
 .language-selection button {
@@ -584,7 +592,27 @@ code {
 
 /* ===== Responsive layout ===== */
 
+@media all and (max-width: 1150px) {
+    .language-selection {
+        top: 12em;
+        z-index: 1;
+        margin-right: 3em;
+    }
+}
+
 @media all and (max-width: 850px) {
+    #big-title {
+        font-size: 2em;
+    }
+
+    .white {
+        padding: 1em 0.5em;
+    }
+
+    .language-selection {
+        margin-right: 0;
+    }
+
     .topnav {
         position: sticky;
         top: 0px;
